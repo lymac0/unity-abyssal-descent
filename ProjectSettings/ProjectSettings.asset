@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 77bab6d64df5dd04a8b77dfc6ea3c5f3
+  productGUID: 8405dc99c9d414943ae623e260cdb350
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -687,11 +687,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: d13356aa-a11e-466b-845d-82ec9b612440
+  cloudProjectId: c9d36c7a-d2c2-4df6-88cd-2dc94fd2332a
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: AbyssalDescent
-  organizationId: srtkamil42
+  organizationId: nurgltnc
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
