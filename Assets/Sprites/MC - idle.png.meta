@@ -121,177 +121,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MainChar - idle_0
+      name: MC - idle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 192
-        height: 128
+        x: 64
+        y: 32
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 33a1d5e61acdf81c0800000000000000
-      internalID: -4499134916820395469
+      spriteID: 1c5f89e8c4f4b814a81738bfaef92826
+      internalID: 1905926193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainChar - idle_1
+      name: MC - idle_1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 192
-        height: 128
+        x: 256
+        y: 32
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fba190931c5655570800000000000000
-      internalID: 8454775756017965759
+      spriteID: 1cbd5039b4d5ce944974160251c35435
+      internalID: 806130951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainChar - idle_2
+      name: MC - idle_2
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 192
-        height: 128
+        x: 448
+        y: 32
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: eb6ff6e408f551ce0800000000000000
-      internalID: -1435135901571221826
+      spriteID: 9b13399d7addad34abf56e969eab5b5b
+      internalID: 581087369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainChar - idle_3
+      name: MC - idle_3
       rect:
         serializedVersion: 2
-        x: 576
-        y: 0
-        width: 192
-        height: 128
+        x: 640
+        y: 32
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d44dd04f0f74050a0800000000000000
-      internalID: -6894931929291959219
+      spriteID: 1b9af40faeaa3794895e2a2c9d17bf2f
+      internalID: 1544118862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainChar - idle_4
+      name: MC - idle_4
       rect:
         serializedVersion: 2
-        x: 768
-        y: 0
-        width: 192
-        height: 128
+        x: 832
+        y: 32
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bb88a4f19d5157280800000000000000
-      internalID: -9046300254226708293
+      spriteID: 49f1d485d36cf7e44b208e6fae959650
+      internalID: -4107657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainChar - idle_5
+      name: MC - idle_5
       rect:
         serializedVersion: 2
-        x: 960
-        y: 0
-        width: 192
-        height: 128
+        x: 1024
+        y: 32
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2dff8ebbd1c508b90800000000000000
-      internalID: -7241686918035341358
+      spriteID: dba2b7ecfb3295b449d5396958b99edd
+      internalID: -1423593417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainChar - idle_6
+      name: MC - idle_6
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 0
-        width: 192
-        height: 128
+        x: 1216
+        y: 32
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 54fc8b9f884461750800000000000000
-      internalID: 6275278485883244357
+      spriteID: e067ea13a85cf6640843738038d5d663
+      internalID: 62407071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainChar - idle_7
+      name: MC - idle_7
       rect:
         serializedVersion: 2
-        x: 1344
-        y: 0
-        width: 192
-        height: 128
+        x: 1408
+        y: 32
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4eae3ab337158ce90800000000000000
-      internalID: -7005259665011119388
+      spriteID: 6e03dfc196047334883fb67552fbaa76
+      internalID: -719793326
       vertices: []
       indices: 
       edges: []
@@ -310,14 +310,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MainChar - idle_0: -4499134916820395469
-      MainChar - idle_1: 8454775756017965759
-      MainChar - idle_2: -1435135901571221826
-      MainChar - idle_3: -6894931929291959219
-      MainChar - idle_4: -9046300254226708293
-      MainChar - idle_5: -7241686918035341358
-      MainChar - idle_6: 6275278485883244357
-      MainChar - idle_7: -7005259665011119388
+      MC - idle_0: 1905926193
+      MC - idle_1: 806130951
+      MC - idle_10: -1881103019
+      MC - idle_11: 1834021629
+      MC - idle_12: 201618941
+      MC - idle_13: -683879642
+      MC - idle_14: -957865895
+      MC - idle_15: -1693592238
+      MC - idle_2: 581087369
+      MC - idle_3: 1544118862
+      MC - idle_4: -4107657
+      MC - idle_5: -1423593417
+      MC - idle_6: 62407071
+      MC - idle_7: -719793326
+      MC - idle_8: 1755058388
+      MC - idle_9: 1281667035
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
