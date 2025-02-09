@@ -1,33 +1,56 @@
+using System;
 using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed;
-    private Rigidbody2D rb;
+    private Rigidbody2D body;
     private Animator anim;
+    public bool grounded;
+    public float drag;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
+        float xInput = Input.GetAxis("Horizontal");
+        float yInput = Input.GetAxis("Vertical");
 
-        if (horizontalInput > 0)
+        if (Mathf.Abs(xInput) > 0)
+            body.linearVelocity = new Vector2(xInput * speed, body.linearVelocity.y);
+        if (Mathf.Abs(yInput) > 0)
+            body.linearVelocity = new Vector2(body.linearVelocity.x, yInput * speed);
+
+
+        if (xInput > 0)
             transform.localScale = new Vector3(math.abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        if (horizontalInput < 0)
+        if (xInput < 0)
             transform.localScale = new Vector3(-math.abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
 
-        if(Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, speed);
+            body.linearVelocity = new Vector2(body.linearVelocity.x, speed);
         }
 
-        anim.SetBool("isWalking", horizontalInput != 0);
+        anim.SetBool("isWalking", xInput != 0);
+    }
+
+    private void FixedUpdate()
+    {
+        CheckGround();
+
+        if (grounded)
+        {
+            body.linearVelocity *= drag;
+        }
+    }
+
+    private void CheckGround()
+    {
     }
 }
