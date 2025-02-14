@@ -209,28 +209,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2. second layer_5
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 95
-        width: 320
-        height: 385
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 99fba6da668df43a0800000000000000
-      internalID: -6678881786859438183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: 2. second layer_6
       rect:
         serializedVersion: 2
@@ -6241,7 +6219,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 640
-        y: 384
+        y: 383
         width: 32
         height: 32
       alignment: 0
@@ -6724,12 +6702,12 @@ TextureImporter:
       name: 2. second layer_301
       rect:
         serializedVersion: 2
-        x: 809
+        x: 806
         y: 96
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.41207504, y: 0.49999976}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6746,7 +6724,7 @@ TextureImporter:
       name: 2. second layer_302
       rect:
         serializedVersion: 2
-        x: 840
+        x: 839
         y: 96
         width: 32
         height: 32
@@ -6768,7 +6746,7 @@ TextureImporter:
       name: 2. second layer_303
       rect:
         serializedVersion: 2
-        x: 872
+        x: 869
         y: 95
         width: 32
         height: 32
@@ -7226,6 +7204,138 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 2. second layer_322
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0dd709d72e16544a82d0158fc957538
+      internalID: -758577719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. second layer_323
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1120eb414e8a0d4f9563b7b06558ac1
+      internalID: 1951603409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. second layer_324
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99738f0f4badc3e44999cc9172bd925c
+      internalID: 319940274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. second layer_5
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 147
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459a32e50d1ecb54e98648f58e6a28c4
+      internalID: 512037306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. second layer_325
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46e150e7ee5a36489f6d9981cd5fdbc
+      internalID: 1548391953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. second layer_326
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e562d97447834df45ad7b69f750c4eac
+      internalID: 1571879220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -7487,6 +7597,11 @@ TextureImporter:
       2. second layer_32: 1511641853
       2. second layer_320: 1184043015
       2. second layer_321: 158070664
+      2. second layer_322: -758577719
+      2. second layer_323: 1951603409
+      2. second layer_324: 319940274
+      2. second layer_325: 1548391953
+      2. second layer_326: 1571879220
       2. second layer_33: -827575086
       2. second layer_34: 169794206
       2. second layer_35: 1411407444
@@ -7504,6 +7619,7 @@ TextureImporter:
       2. second layer_47: 669320958
       2. second layer_48: -29818731
       2. second layer_49: -186346802
+      2. second layer_5: 512037306
       2. second layer_50: -1729946943
       2. second layer_51: -1485171498
       2. second layer_52: -1405088651

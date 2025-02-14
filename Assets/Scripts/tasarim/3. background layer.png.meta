@@ -633,7 +633,7 @@ TextureImporter:
       name: 3. background layer_32
       rect:
         serializedVersion: 2
-        x: 95
+        x: 96
         y: 640
         width: 32
         height: 32
@@ -1051,7 +1051,7 @@ TextureImporter:
       name: 3. background layer_51
       rect:
         serializedVersion: 2
-        x: 224
+        x: 227
         y: 640
         width: 32
         height: 32
@@ -1140,7 +1140,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 352
-        y: 800
+        y: 799
         width: 32
         height: 32
       alignment: 9
@@ -1865,7 +1865,7 @@ TextureImporter:
       name: 3. background layer_87
       rect:
         serializedVersion: 2
-        x: 97
+        x: 96
         y: 384
         width: 32
         height: 32
@@ -1931,7 +1931,7 @@ TextureImporter:
       name: 3. background layer_90
       rect:
         serializedVersion: 2
-        x: 65
+        x: 64
         y: 384
         width: 32
         height: 32
@@ -1953,7 +1953,7 @@ TextureImporter:
       name: 3. background layer_91
       rect:
         serializedVersion: 2
-        x: 65
+        x: 64
         y: 416
         width: 32
         height: 32
@@ -1975,8 +1975,8 @@ TextureImporter:
       name: 3. background layer_92
       rect:
         serializedVersion: 2
-        x: 129
-        y: 383
+        x: 128
+        y: 384
         width: 32
         height: 32
       alignment: 9
@@ -1997,8 +1997,8 @@ TextureImporter:
       name: 3. background layer_93
       rect:
         serializedVersion: 2
-        x: 129
-        y: 415
+        x: 128
+        y: 416
         width: 32
         height: 32
       alignment: 9
@@ -2085,8 +2085,8 @@ TextureImporter:
       name: 3. background layer_97
       rect:
         serializedVersion: 2
-        x: 256
-        y: 418
+        x: 64
+        y: 512
         width: 32
         height: 32
       alignment: 9
@@ -4721,6 +4721,380 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 3. background layer_208
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 450
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.48911, y: 0.5192642}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158ffe7f55c4a0548805b9d35c3c2222
+      internalID: -738581275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_209
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 512
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.48911, y: 0.5192642}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f4e8e1f0555b6418230810e020c2ce
+      internalID: 624812626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_210
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 640
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.48911119, y: 0.4999981}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3ff99cab919304d935897a4f629d86
+      internalID: 1137186414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_211
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 384
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.48530388, y: 0.4841609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ecd16c272f53a4bbd101d482597091
+      internalID: -1102910902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_212
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 416
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.48530388, y: 0.4841609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03b9be94d5610541b5873f14ded58a7
+      internalID: 1842475650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_213
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 223
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a46365cda64d94aadc8f6e1ee46147
+      internalID: -1812377279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_214
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 191
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc7a96e5a928844aa1095721b665fd5
+      internalID: 1355870993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_215
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 159
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d951b3508b0c264ca26f2ee4f038593
+      internalID: 438245328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_216
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 499
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff84d5b242515a44abb7093abbe9d94
+      internalID: 199989933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_217
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 736
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.48911119, y: 0.4999981}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d22c6a197ceea488d25088b4230a58
+      internalID: 1012315704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_218
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 433
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.48530388, y: 0.4841609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7e42ed114afcf4bb2de5fe6699dfe0
+      internalID: 809245203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_219
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 579
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.48530388, y: 0.4841609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18aefa470f0a11459c1898ceedee0a8
+      internalID: 279735260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_220
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 208
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.48530388, y: 0.4841609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e658fa9b7e5e848bbebad76e458039
+      internalID: -1878405254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_221
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 192
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.48530388, y: 0.4841609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1593ae5d173cec240bb701dd67a15217
+      internalID: -1671399254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_222
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 192
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.48530388, y: 0.4841609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd87c931d58bdc439e2aa5d9be24287
+      internalID: 327128734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_223
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 736
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.48530388, y: 0.4841609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf61b0649636cd42981c69ba237dfeb
+      internalID: -726577351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. background layer_224
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 752
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.48530388, y: 0.4841609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6ce4332663300429dacc3f1a0dbbab
+      internalID: 34000778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -4735,7 +5109,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      3. background layer_0: -1449794605
+      3. background layer_: -1449794605
       3. background layer_1: 2099780108
       3. background layer_10: -1014389767
       3. background layer_100: 1667068827
@@ -4856,8 +5230,25 @@ TextureImporter:
       3. background layer_205: 344682376
       3. background layer_206: -745060833
       3. background layer_207: 1761022997
+      3. background layer_208: -738581275
+      3. background layer_209: 624812626
       3. background layer_21: -1712993478
+      3. background layer_210: 1137186414
+      3. background layer_211: -1102910902
+      3. background layer_212: 1842475650
+      3. background layer_213: -1812377279
+      3. background layer_214: 1355870993
+      3. background layer_215: 438245328
+      3. background layer_216: 199989933
+      3. background layer_217: 1012315704
+      3. background layer_218: 809245203
+      3. background layer_219: 279735260
       3. background layer_22: -1327437743
+      3. background layer_220: -1878405254
+      3. background layer_221: -1671399254
+      3. background layer_222: 327128734
+      3. background layer_223: -726577351
+      3. background layer_224: 34000778
       3. background layer_23: 1371666780
       3. background layer_24: 1111886488
       3. background layer_25: -173987084
