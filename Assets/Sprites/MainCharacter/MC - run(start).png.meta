@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 4454725fbe0a41f4e9197bffcd62034b
+guid: aca735fb58abf46428f75e7b8958c695
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8890384205950848293
-    second: MainChar - jump(end)_0
+      213: -869878212888591599
+    second: MainChar - run(start)_0
   - first:
-      213: -6136070398151136064
-    second: MainChar - jump(end)_1
-  - first:
-      213: -2315717920352787196
-    second: MainChar - jump(end)_2
-  - first:
-      213: -6061278011957122005
-    second: MainChar - jump(end)_3
+      213: -4533389418414068065
+    second: MainChar - run(start)_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,89 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MC - jump(end)_0
+      name: MC - run(start)_0
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 70
-        height: 64
+        x: 0
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dee5902a1cec737478346f089a1656d0
-      internalID: 2063642698
+      spriteID: c797e5b7d7a40a348a3f73e00195cc44
+      internalID: -365468223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC - jump(end)_1
+      name: MC - run(start)_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 32
-        width: 70
-        height: 64
+        x: 192
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9506e32eb87310b4bb97f5cee4f2dca4
-      internalID: 865696231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC - jump(end)_2
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 32
-        width: 70
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e1604d13073f7746bfe734ffa692642
-      internalID: -1315912049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC - jump(end)_3
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 31
-        width: 70
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6179fe3581af7ca4d93f000e2b7b8a94
-      internalID: -1537313403
+      spriteID: aee6aef7eae3939478b909de534427c6
+      internalID: 797821226
       vertices: []
       indices: 
       edges: []
@@ -200,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 27025950b43e7d248b450248fa15e95f
+    spriteID: 49b052266ead7cd43a7b29c9cf5fa9de
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MC - jump(end)_0: 2063642698
-      MC - jump(end)_1: 865696231
-      MC - jump(end)_2: -1315912049
-      MC - jump(end)_3: -1537313403
+      MC - run(start)_0: -365468223
+      MC - run(start)_1: 797821226
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
