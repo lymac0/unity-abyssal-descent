@@ -1,10 +1,19 @@
 using System;
+using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem.XInput;
 
 public class PlayerController : MonoBehaviour
 {
+    private bool canDash = true;
+    private bool isDashing;
+    [SerializeField] private float dashingPower = 20f;
+    private float dashingTime = 0.183f;
+    private float dashingCooldown = 1f;
+    [SerializeField] private GameObject smokeEffectPrefab; // Dash sırasında çıkacak duman efekti
+
+
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
     [SerializeField] private float jumpSpeed;
@@ -14,10 +23,8 @@ public class PlayerController : MonoBehaviour
     public BoxCollider2D groundCheck;
     public LayerMask groundMask;
     private int jumpCount;
-
     private float xInput;
     private float yInput;
-
     public int maxJumps = 2;
     public bool grounded;
     [Range(0f, 1f)]
@@ -32,12 +39,16 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (isDashing)
+            return;
         GetInput();
         MoveWithInput();
     }
 
     private void FixedUpdate()
     {
+        if (isDashing)
+            return;
         CheckGround();
         ApplyFriction();
     }
@@ -45,7 +56,7 @@ public class PlayerController : MonoBehaviour
     private void GetInput()
     {
         xInput = Input.GetAxis("Horizontal");
-        yInput = Input.GetAxis("Vertical");
+        // yInput = Input.GetAxis("Vertical");
     }
     private void MoveWithInput()
     {
@@ -56,19 +67,21 @@ public class PlayerController : MonoBehaviour
             float direction = Mathf.Sign(xInput);
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * direction, transform.localScale.y, transform.localScale.z);
 
+        }
+        else if (!isDashing)
+        {
+            body.linearVelocity = new Vector2(0, body.linearVelocity.y);
+        }
 
-            if (Input.GetButton("Sprint"))
-            {
-                groundSpeed = runSpeed;
-                anim.SetBool("isRunning", true);
-            }
-            else
-            {
-                groundSpeed = walkSpeed;
-                anim.SetBool("isRunning", false);
-            }
-
-
+        if (Input.GetButton("Sprint") && Mathf.Abs(xInput) > 0)
+        {
+            groundSpeed = runSpeed;
+            anim.SetBool("isRunning", true);
+        }
+        else
+        {
+            groundSpeed = walkSpeed;
+            anim.SetBool("isRunning", false);
         }
 
         if (Mathf.Abs(yInput) > 0)
@@ -83,6 +96,10 @@ public class PlayerController : MonoBehaviour
         {
             body.linearVelocity = new Vector2(body.linearVelocity.x, jumpSpeed);
             jumpCount--;
+        }
+        if (Input.GetButtonDown("Dash") && canDash)
+        {
+            StartCoroutine(Dash());
         }
 
 
@@ -104,4 +121,37 @@ public class PlayerController : MonoBehaviour
         if (grounded && xInput == 0)
             body.linearVelocity *= groundDecay;
     }
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        anim.SetBool("isDashing", true); // Dash Start animasyonu başlasın
+
+        float originalGravity = body.gravityScale;
+        body.gravityScale = 0f;
+
+        float dashDirection = Mathf.Sign(transform.localScale.x);
+
+        // 🚀 Dash başladığında Smoke Effect oluştur
+        Vector3 smokePosition = transform.position + new Vector3(dashDirection * -0.5f, -0.75f, 0);
+        GameObject smoke = Instantiate(smokeEffectPrefab, smokePosition, Quaternion.identity);
+        smoke.transform.localScale = new Vector3(dashDirection, 1, 1);
+        Destroy(smoke, 0.5f); // 0.5 saniye sonra efekti yok et
+
+        body.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        yield return new WaitForSeconds(dashingTime);
+        body.gravityScale = originalGravity;
+        isDashing = false;
+        anim.SetBool("isDashing", false);
+        yield return new WaitForSeconds(0.15f); 
+        
+        
+        
+
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
+    }
+
+
+
 }
