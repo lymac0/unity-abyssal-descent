@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 04da753e1faecf24bac9ecb7252275d5
+guid: 13ba6fde90ae6144195557c5e59641ca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6961198124866637508
-    second: sayfa_0
+      213: 29047765004151301
+    second: MainChar - Swimming(Hit)_0
+  - first:
+      213: -8770147429396128260
+    second: MainChar - Swimming(Hit)_1
+  - first:
+      213: 1707022592975445468
+    second: MainChar - Swimming(Hit)_2
+  - first:
+      213: -4143750867369714364
+    second: MainChar - Swimming(Hit)_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sayfa_0
+      name: MainChar - Swimming(Hit)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 495
-        height: 654
+        x: 80
+        y: 31
+        width: 44
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c31753cff2bd46f90800000000000000
-      internalID: -6961198124866637508
+      spriteID: 50a6792d9c2376000800000000000000
+      internalID: 29047765004151301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainChar - Swimming(Hit)_1
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 31
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfdd903116d2a4680800000000000000
+      internalID: -8770147429396128260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainChar - Swimming(Hit)_2
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 30
+        width: 49
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdd1edd010090b710800000000000000
+      internalID: 1707022592975445468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainChar - Swimming(Hit)_3
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 30
+        width: 52
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44d16b86a807e76c0800000000000000
+      internalID: -4143750867369714364
       vertices: []
       indices: 
       edges: []
@@ -147,8 +222,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      sayfa_0: -6961198124866637508
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

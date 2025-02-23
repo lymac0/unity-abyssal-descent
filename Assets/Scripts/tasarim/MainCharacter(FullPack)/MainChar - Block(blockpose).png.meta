@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 04da753e1faecf24bac9ecb7252275d5
+guid: 0be0bfae4bc011f4d904ac092461a90d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6961198124866637508
-    second: sayfa_0
+      213: -7094667379297739827
+    second: MainChar - Block(blockpose)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sayfa_0
+      name: MainChar - Block(blockpose)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 495
-        height: 654
+        x: 78
+        y: 31
+        width: 36
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c31753cff2bd46f90800000000000000
-      internalID: -6961198124866637508
+      spriteID: dcb18619b9daa8d90800000000000000
+      internalID: -7094667379297739827
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      sayfa_0: -6961198124866637508
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

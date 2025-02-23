@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 04da753e1faecf24bac9ecb7252275d5
+guid: bfe7b5a1de609f54b888f83a7ad43d3a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6961198124866637508
-    second: sayfa_0
+      213: 2275257540626462663
+    second: MainChar - Camping&Drink(Crouch-Start)_0
+  - first:
+      213: -7352441697750882881
+    second: MainChar - Camping&Drink(Crouch-Start)_1
+  - first:
+      213: -1262589617573195336
+    second: MainChar - Camping&Drink(Crouch-Start)_2
+  - first:
+      213: -2979590693159582608
+    second: MainChar - Camping&Drink(Crouch-Start)_3
+  - first:
+      213: -6460325907852980183
+    second: MainChar - Camping&Drink(Crouch-Start)_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sayfa_0
+      name: MainChar - Camping&Drink(Crouch-Start)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 495
-        height: 654
+        x: 76
+        y: 31
+        width: 45
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c31753cff2bd46f90800000000000000
-      internalID: -6961198124866637508
+      spriteID: 7c7b199ada6539f10800000000000000
+      internalID: 2275257540626462663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainChar - Camping&Drink(Crouch-Start)_1
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 31
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5e9c51b31e6f990800000000000000
+      internalID: -7352441697750882881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainChar - Camping&Drink(Crouch-Start)_2
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 31
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b1147bae616a7ee0800000000000000
+      internalID: -1262589617573195336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainChar - Camping&Drink(Crouch-Start)_3
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 31
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 074c9261d0e56a6d0800000000000000
+      internalID: -2979590693159582608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainChar - Camping&Drink(Crouch-Start)_4
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 31
+        width: 47
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9209b29a0df4856a0800000000000000
+      internalID: -6460325907852980183
       vertices: []
       indices: 
       edges: []
@@ -147,8 +247,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      sayfa_0: -6961198124866637508
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

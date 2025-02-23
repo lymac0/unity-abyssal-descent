@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 04da753e1faecf24bac9ecb7252275d5
+guid: 075bb20f405811a4ca04ee4c602d3258
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6961198124866637508
-    second: sayfa_0
+      213: -2078912032766767768
+    second: elevator 1_0
+  - first:
+      213: -7952978650719914601
+    second: elevator 1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +116,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sayfa_0
+      name: elevator 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 495
-        height: 654
+        y: 32
+        width: 64
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c31753cff2bd46f90800000000000000
-      internalID: -6961198124866637508
+      spriteID: 86dc6af45883623e0800000000000000
+      internalID: -2078912032766767768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elevator 1_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 64
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2cf8c77a876b74abe01707d89fe6b0
+      internalID: -250870978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elevator 1_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737664a8bdf340d429ae093c0dbafea9
+      internalID: -946757878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elevator 1_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324f8182bf6cd4d43b19bc5312e393d2
+      internalID: 192813458
       vertices: []
       indices: 
       edges: []
@@ -138,7 +207,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9df5dec4e15769d4c9c4c1f635a23561
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +217,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sayfa_0: -6961198124866637508
+      elevator 1_1: -946757878
+      elevator 1_2: -250870978
+      elevator 1_3: 192813458
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
