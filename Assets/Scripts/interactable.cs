@@ -9,7 +9,6 @@ public class Interactable : MonoBehaviour
     public GameObject interactionText; // "E Basýn" yazýsý
     public GameObject fullScreenPanel; // Bilgi ekraný
     public TextMeshProUGUI infoText; // Bilgilendirici metin
-    public Button closeButton; // Kapat butonu
     public Camera mainCamera; // Ana Kamera
     public float zoomInSize = 3f; // Yakýnlaþtýrma seviyesi
     public float zoomOutSize = 5f; // Normal kamera uzaklýðý
@@ -37,9 +36,6 @@ public class Interactable : MonoBehaviour
 
         interactionText.SetActive(false); // Baþlangýçta "E Basýn" yazýsýný kapat
         fullScreenPanel.SetActive(false); // Bilgi panelini baþlangýçta kapalý tut
-
-        // Kapat butonuna týklanýnca bilgi panelini kapat
-        closeButton.onClick.AddListener(CloseInfoPanel);
     }
 
     private void Update()
@@ -67,16 +63,16 @@ public class Interactable : MonoBehaviour
         return distance <= range;
     }
 
-    private void ToggleInfoPanel()
+    public void ToggleInfoPanel()
     {
-        isPanelOpen = !isPanelOpen;
+        isPanelOpen = !isPanelOpen; // Panelin açýk olup olmadýðýný tersine çevir
         fullScreenPanel.SetActive(isPanelOpen);
 
         if (isPanelOpen)
         {
-            infoMessage = infoText.text;
+            infoMessage = infoText.text; // Bilgi metnini güncelle
             StopAllCoroutines();
-            Vector3 zoomPosition = new Vector3(player.position.x, player.position.y, -10); // Kamera karakterin tam ortasýna zoom yapar
+            Vector3 zoomPosition = new Vector3(player.position.x, player.position.y, -10);
             StartCoroutine(SmoothZoom(zoomPosition, zoomInSize));
         }
         else
@@ -85,15 +81,6 @@ public class Interactable : MonoBehaviour
             StartCoroutine(SmoothZoom(originalPosition, originalSize));
         }
     }
-
-    private void CloseInfoPanel()
-    {
-        fullScreenPanel.SetActive(false);
-        isPanelOpen = false;
-        StopAllCoroutines();
-        StartCoroutine(SmoothZoom(originalPosition, originalSize));
-    }
-
     private IEnumerator SmoothZoom(Vector3 targetPosition, float targetSize)
     {
         float elapsedTime = 0f;
@@ -118,4 +105,5 @@ public class Interactable : MonoBehaviour
         mainCamera.transform.position = targetPosition;
         mainCamera.orthographicSize = targetSize;
     }
+
 }

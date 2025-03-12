@@ -157,7 +157,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -195,7 +195,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1147,7 +1147,48 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - death_0: 1649992459796929396
+      MainChar - death_1: -5372612208219249836
+      MainChar - death_10: -6300061389269562302
+      MainChar - death_11: 9218251156738186048
+      MainChar - death_12: 126416871045461227
+      MainChar - death_13: -181065374970205539
+      MainChar - death_14: -1942917880650397656
+      MainChar - death_15: 7087826779576729751
+      MainChar - death_16: -4837445429461319397
+      MainChar - death_17: -719285678410844085
+      MainChar - death_18: -239381516206906056
+      MainChar - death_19: -3274462323087702234
+      MainChar - death_2: -1863749600457640775
+      MainChar - death_20: 2630194421953784836
+      MainChar - death_21: -3115111655058251861
+      MainChar - death_22: -4764574380093866028
+      MainChar - death_23: -1375143511309641645
+      MainChar - death_24: -4933743293055464956
+      MainChar - death_25: -5884433814460832673
+      MainChar - death_26: 6009480880174930520
+      MainChar - death_27: 4020490862914481938
+      MainChar - death_28: 1916129452199930492
+      MainChar - death_29: -3261772147128917900
+      MainChar - death_3: 4888978248571520943
+      MainChar - death_30: 6943297931312495686
+      MainChar - death_31: 8773839313892791978
+      MainChar - death_32: -7274265089649801074
+      MainChar - death_33: -931328506424465016
+      MainChar - death_34: -403815840100791121
+      MainChar - death_35: -4677470349125704377
+      MainChar - death_36: 3077788702101588922
+      MainChar - death_37: -3106532779264958779
+      MainChar - death_38: 82887691554177367
+      MainChar - death_39: 9072861815548000768
+      MainChar - death_4: -8475320512526231498
+      MainChar - death_40: -4555498601551810290
+      MainChar - death_5: 835623757611962031
+      MainChar - death_6: 176932564176955718
+      MainChar - death_7: -2873888638851108768
+      MainChar - death_8: -1474988572208774234
+      MainChar - death_9: 7587151215724080898
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
