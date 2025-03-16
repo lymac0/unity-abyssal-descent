@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    private float timeBtwAttack;
-    public float startTimeBtwAttack;
     private Animator anim;
+    private bool isAttacking;
+    private int attackStep = 0;
     public Transform attackPos;
     public LayerMask WhatIsEnemies;
     public float attackRange;
@@ -14,38 +14,50 @@ public class PlayerAttack : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
+
     void Update()
     {
-        StartCoroutine(Attack());
+        if (Input.GetKeyDown(KeyCode.Z) && !isAttacking)
+        {
+            if (attackStep > 2)
+            {
+                ResetAttack();
+            }
+            attackStep++;
+            Attack();
+        }
     }
+
+    private void Attack()
+    {
+        isAttacking = true;
+        anim.SetBool("isAttacking", true);
+        anim.SetInteger("AttackStep", attackStep);
+        DealDamage();
+    }
+
+    // Animation Event çağırır
+    private void DealDamage()
+    {
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, WhatIsEnemies);
+        foreach (var enemy in enemiesToDamage)
+        {
+            enemy.GetComponent<Enemy1>().TakeDamage(damage);
+        }
+    }
+
+    // Animasyonun sonunda çağrılır
+    private void ResetAttack()
+    {
+        isAttacking = false;
+        attackStep = 0; // Komboyu sıfırla
+        anim.SetInteger("AttackStep", 0);
+    }
+
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(attackPos.position, attackRange);
+        //Gizmos.color = Color.red;
+        //Gizmos.DrawSphere(attackPos.position, attackRange);
     }
-    private IEnumerator Attack()
-    {
-        if (timeBtwAttack <= 0)
-        {
-            // then you can attack
-            if (Input.GetKey(KeyCode.LeftControl))
-            {
-                anim.SetBool("isAttacking", true);
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, WhatIsEnemies);
-                for (int i = 0; i < enemiesToDamage.Length; i++)
-                {
-                    enemiesToDamage[i].GetComponent<Enemy1>().TakeDamage(damage);
-                }
-                yield return new WaitForSeconds(0.550f);
-                anim.SetBool("isAttacking", false);
-                Debug.Log(enemiesToDamage.Length);
-                print("AMK");
-            }
-            timeBtwAttack = startTimeBtwAttack;
-        }
-        else
-        {
-            timeBtwAttack -= Time.deltaTime;
-        }
-    }
+
 }

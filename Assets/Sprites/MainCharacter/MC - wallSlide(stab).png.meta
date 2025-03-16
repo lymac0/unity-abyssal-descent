@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: cd42302115ad2f24e9d7a98ad924a139
+guid: 43e95da4162510c4896c6418634298fc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8154430202462599028
-    second: MainChar - attack(recover)_0
+      213: -6042540507762745481
+    second: MainChar - wallSlide(stab)_0
   - first:
-      213: 8939192230595612788
-    second: MainChar - attack(recover)_1
+      213: 1580720005405929490
+    second: MainChar - wallSlide(stab)_1
   - first:
-      213: -5910367826218807856
-    second: MainChar - attack(recover)_2
+      213: -7804881920094932131
+    second: MainChar - wallSlide(stab)_2
   - first:
-      213: 5474790582388110946
-    second: MainChar - attack(recover)_3
+      213: 7096820330989633121
+    second: MainChar - wallSlide(stab)_3
   - first:
-      213: -7582497678506993162
-    second: MainChar - attack(recover)_4
+      213: 6795063136510328746
+    second: MainChar - wallSlide(stab)_4
+  - first:
+      213: 3176298807765063324
+    second: MainChar - wallSlide(stab)_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,111 +115,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MainChar - attack(recover)_0
+      name: MC - wallSlide(stab)_0
       rect:
         serializedVersion: 2
-        x: 87
-        y: 31
-        width: 50
-        height: 60
+        x: 0
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c8800845fe4a5de80800000000000000
-      internalID: -8154430202462599028
+      spriteID: 2509a71461657f84c8205fbb75d40851
+      internalID: 588164055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainChar - attack(recover)_1
+      name: MC - wallSlide(stab)_1
       rect:
         serializedVersion: 2
-        x: 275
-        y: 31
-        width: 49
-        height: 60
+        x: 192
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 470559bc8f36e0c70800000000000000
-      internalID: 8939192230595612788
+      spriteID: 0199f535642f15340a10ce2e56f0cb06
+      internalID: 1430007107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainChar - attack(recover)_2
+      name: MC - wallSlide(stab)_2
       rect:
         serializedVersion: 2
-        x: 460
-        y: 31
-        width: 47
-        height: 60
+        x: 384
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0dd845ac6c72afda0800000000000000
-      internalID: -5910367826218807856
+      spriteID: d2facba33f0edb14da8aa6f94b652ce9
+      internalID: -1469514009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainChar - attack(recover)_3
+      name: MC - wallSlide(stab)_3
       rect:
         serializedVersion: 2
-        x: 651
-        y: 31
-        width: 44
-        height: 60
+        x: 576
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 266b5ea270d5afb40800000000000000
-      internalID: 5474790582388110946
+      spriteID: dfb36484d706c884eaf30eb4d9eb3206
+      internalID: -1668081489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainChar - attack(recover)_4
+      name: MC - wallSlide(stab)_4
       rect:
         serializedVersion: 2
-        x: 844
-        y: 31
-        width: 45
-        height: 60
+        x: 768
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6f9dd52098e85c690800000000000000
-      internalID: -7582497678506993162
+      spriteID: e61fd4e4aa232a8409e443c4483ba130
+      internalID: 1819304552
       vertices: []
       indices: 
       edges: []
@@ -225,7 +228,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fb789e4e933cc9548aa652d756e171f2
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +238,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MainChar - attack(recover)_0: -8154430202462599028
-      MainChar - attack(recover)_1: 8939192230595612788
-      MainChar - attack(recover)_2: -5910367826218807856
-      MainChar - attack(recover)_3: 5474790582388110946
-      MainChar - attack(recover)_4: -7582497678506993162
+      MC - wallSlide(stab)_0: 588164055
+      MC - wallSlide(stab)_1: 1430007107
+      MC - wallSlide(stab)_2: -1469514009
+      MC - wallSlide(stab)_3: -1668081489
+      MC - wallSlide(stab)_4: 1819304552
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
