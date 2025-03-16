@@ -1,22 +1,36 @@
 using System;
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private bool isWalking = false;
     private bool canDash = true;
-    private bool canJump;
+    private bool canNormalJump;
+    private bool canWallJump;
     private bool isDashing;
     private bool isWallSliding;
+    private bool isAttemtingToJump;
+    private bool checkJumpMuliplier;
+    private bool canMove;
+    private bool canFlip;
+    private bool hasWallJumped;
+    private bool isTouchingLedge;
+    private bool canClimbLedge = false;
+    private bool ledgeDetected;
 
     public bool isTouchingWall;
     public bool isGrounded;
     public bool isFacingRight = false;
 
+    private float jumpTimer;
     private float xInput;
     private float movementSpeed;
     private float dashingTime = 0.3f;
     private float dashingCooldown = 1f;
+    private float turnTimer;
+    private float wallJumpTimer;
 
     public float groundCheckRadius;
     public float wallCheckDistance;
@@ -26,9 +40,19 @@ public class PlayerController : MonoBehaviour
     public float variableJumpHeightMultiplier = 0.5f;
     public float wallHopForce;
     public float wallJumpForce;
+    public float jumpTimerSet = 0.15f;
+    public float turnTimerSet = 0.1f;
+    public float wallJumpTimerSet = 0.5f;
+    public float ledgeClimbXOffset1 = 0f;
+    public float ledgeClimbYOffset1 = 0f;
+    public float ledgeClimbXOffset2 = 0f;
+    public float ledgeClimbYOffset2 = 0f;
 
     public Vector2 wallHopDirection;
     public Vector2 wallJumpDirection;
+    private Vector2 ledgePosBot;
+    private Vector2 ledgePos1;
+    private Vector2 ledgePos2;
 
     [SerializeField] private float dashingPower = 20f;
     [SerializeField] private float walkSpeed;
@@ -41,12 +65,15 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     public Transform groundCheck;
     public Transform wallCheck;
+    public Transform ledgeCheck;
+
     public LayerMask groundMask;
 
     private int jumpCount;
     private int facingDirection = 1;
+    private int lastWallJumpedDirection;
 
-    public int maxJumps = 2;
+    public int maxJumps = 1;
 
     [Range(0f, 1f)]
     public float groundDecay;
@@ -72,6 +99,8 @@ public class PlayerController : MonoBehaviour
         MoveWithInput();
         CheckIfCanJump();
         CheckIfWallSliding();
+        CheckJump();
+        CheckLedgeClimb();
     }
 
     private void FixedUpdate()
@@ -86,7 +115,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIfWallSliding()
     {
-        if (isTouchingWall && !isGrounded && body.linearVelocity.y < 0)
+        if (isTouchingWall && xInput == facingDirection && body.linearVelocityY < 0 && !canClimbLedge)
         {
             isWallSliding = true;
         }
@@ -95,6 +124,33 @@ public class PlayerController : MonoBehaviour
             isWallSliding = false;
         }
 
+    }
+
+    private void CheckLedgeClimb()
+    {
+        if (ledgeDetected && !canClimbLedge)
+        {
+            canClimbLedge = true;
+
+            if (isFacingRight)
+            {
+                ledgePos1 = new Vector2(ledgePosBot.x + wallCheckDistance - ledgeClimbXOffset1, ledgePosBot.y + ledgeClimbYOffset1);
+                ledgePos2 = new Vector2(ledgePosBot.x + wallCheckDistance + ledgeClimbXOffset2, ledgePosBot.y + ledgeClimbYOffset2);
+            }
+            else
+            {
+                ledgePos1 = new Vector2(ledgePosBot.x - wallCheckDistance + ledgeClimbXOffset1, ledgePosBot.y + ledgeClimbYOffset1);
+                ledgePos2 = new Vector2(ledgePosBot.x - wallCheckDistance - ledgeClimbXOffset2, ledgePosBot.y + ledgeClimbYOffset2);
+            }
+            canMove = false;
+            canFlip = false;
+
+            anim.SetBool("canClimbLedge", canClimbLedge);
+        }
+        if (canClimbLedge)
+        {
+            transform.position = ledgePos1;
+        }
     }
 
     private void CheckMovementDirection()
@@ -115,15 +171,31 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("xVelocity", Mathf.Abs(body.linearVelocity.x));
         anim.SetFloat("yVelocity", body.linearVelocity.y);
         anim.SetBool("isWallSliding", isWallSliding);
+        if (xInput != 0)
+        {
+            anim.SetBool("isRunning", !isWalking);
+        }
+        else
+        {
+            anim.SetBool("isRunning", false);
+        }
     }
 
     private void GetInput()
     {
         xInput = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && canJump)
+        if (Input.GetButtonDown("Jump"))
         {
-            Jump();
+            if (isGrounded || (jumpCount > 0 && isTouchingWall))
+            {
+                NormalJump();
+            }
+            else
+            {
+                jumpTimer = jumpTimerSet;
+                isAttemtingToJump = true;
+            }
         }
 
         if (Input.GetButtonDown("Dash") && canDash)
@@ -131,8 +203,31 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        if (Input.GetButtonUp("Jump"))
+        if (Input.GetButtonDown("Horizontal") && isTouchingWall)
         {
+            if (!isGrounded && xInput != facingDirection)
+            {
+                canMove = false;
+                canFlip = false;
+
+                turnTimer = turnTimerSet;
+            }
+        }
+
+        if (turnTimer >= 0)
+        {
+            turnTimer -= Time.deltaTime;
+
+            if (turnTimer <= 0)
+            {
+                canMove = true;
+                canFlip = true;
+            }
+        }
+
+        if (checkJumpMuliplier && !Input.GetButton("Jump"))
+        {
+            checkJumpMuliplier = false;
             body.linearVelocity = new Vector2(body.linearVelocityX, body.linearVelocity.y * variableJumpHeightMultiplier);
         }
     }
@@ -142,24 +237,15 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-        if (Mathf.Abs(xInput) > 0 && isGrounded)
-        {
-            body.linearVelocity = new Vector2(xInput * movementSpeed, body.linearVelocity.y);
-        }
-        else if (!isGrounded && !isWallSliding && Mathf.Abs(xInput) != 0)
-        {
-            Vector2 forceToAdd = new Vector2(movementForceInAir * xInput, 0);
-            body.AddForce(forceToAdd);
-
-            if (Mathf.Abs(body.linearVelocity.x) > movementSpeed)
-            {
-                body.linearVelocity = new Vector2(movementSpeed * xInput, body.linearVelocity.y);
-            }
-        }
-        else if (!isGrounded && !isWallSliding && xInput == 0)
+        if (!isGrounded && !isWallSliding && xInput == 0)
         {
             body.linearVelocity = new Vector2(body.linearVelocityX * airDragMultiplier, body.linearVelocityY);
         }
+        else if (canMove)
+        {
+            body.linearVelocity = new Vector2(xInput * movementSpeed, body.linearVelocity.y);
+        }
+
 
         // WALL SLIDE
         if (isWallSliding && body.linearVelocityY < -wallSlideSpeed)
@@ -168,18 +254,12 @@ public class PlayerController : MonoBehaviour
         }
 
         // Koşma mekaniği
-        if (Input.GetButton("Sprint") && Mathf.Abs(xInput) > 0 && isGrounded)
+        if (Input.GetButtonDown("Walk"))
         {
-            movementSpeed = runSpeed;
-            anim.SetBool("isRunning", true);
-        }
-        else
-        {
-            movementSpeed = walkSpeed;
-            anim.SetBool("isRunning", false);
+            isWalking = !isWalking;
         }
 
-
+        movementSpeed = isWalking ? walkSpeed : runSpeed;
 
         // Hızın sıfırlanması
         if (Mathf.Abs(body.linearVelocity.x) < 0.3f)
@@ -190,7 +270,7 @@ public class PlayerController : MonoBehaviour
 
     private void Flip()
     {
-        if (!isWallSliding)
+        if (!isWallSliding && canFlip)
         {
             facingDirection *= -1;
             isFacingRight = !isFacingRight;
@@ -198,21 +278,43 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void FinishLedgeClimb()
+    {
+        canClimbLedge = false;
+        transform.position = ledgePos2;
+        canMove = true;
+        canFlip = true;
+        ledgeDetected = false;
+        anim.SetBool("canClimbLedge", canClimbLedge);
+    }
+
     private void CheckSurroundings()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundMask);
         isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, groundMask);
+        isTouchingLedge = Physics2D.Raycast(ledgeCheck.position, transform.right, wallCheckDistance, groundMask);
 
+        if (isTouchingWall && !isTouchingLedge && !ledgeDetected)
+        {
+            ledgeDetected = true;
+            ledgePosBot = wallCheck.position;
+        }
     }
 
     private void CheckIfCanJump()
     {
-        if ((isGrounded && body.linearVelocity.y <= 0) || isWallSliding)
+        if (isGrounded && body.linearVelocity.y <= 0.01f)
         {
             jumpCount = maxJumps;
         }
 
-        canJump = jumpCount > 0;
+        if (isTouchingWall)
+        {
+            checkJumpMuliplier = false;
+            canWallJump = true;
+        }
+
+        canNormalJump = jumpCount > 0;
     }
 
     private void ApplyFriction()
@@ -221,27 +323,75 @@ public class PlayerController : MonoBehaviour
             body.linearVelocity *= groundDecay;
     }
 
-    private void Jump()
+    private void CheckJump()
     {
-        if (canJump && !isWallSliding)
+        if (jumpTimer > 0)
+        {
+            // Wall Jump
+            if (!isGrounded && isTouchingWall && xInput != 0 && xInput != facingDirection)
+            {
+                Debug.Log("Wall Jump atıldı!");
+                WallJump();
+            }
+            else if (isGrounded)
+            {
+                NormalJump();
+            }
+        }
+        if (isAttemtingToJump)
+        {
+            jumpTimer -= Time.deltaTime;
+        }
+
+        if (wallJumpTimer > 0)
+        {
+            if (hasWallJumped && xInput == -lastWallJumpedDirection)
+            {
+                body.linearVelocity = new Vector2(body.linearVelocityX, 0.0f);
+                hasWallJumped = false;
+            }
+            else if (wallJumpTimer <= 0)
+            {
+                hasWallJumped = false;
+            }
+            else
+            {
+                wallJumpTimer -= Time.deltaTime;
+            }
+        }
+    }
+
+    private void NormalJump()
+    {
+        if (canNormalJump)
         {
             body.linearVelocity = new Vector2(body.linearVelocity.x, jumpForce);
             jumpCount--;
+            jumpTimer = 0;
+            isAttemtingToJump = false;
+            checkJumpMuliplier = true;
         }
+    }
 
-        if (isWallSliding && xInput == 0 && canJump) // WALL HOP
+    private void WallJump()
+    {
+        if (canWallJump)
         {
+            body.linearVelocity = new Vector2(body.linearVelocity.x, 0.0f);
             isWallSliding = false;
-            jumpCount--;
-            Vector2 forceToAdd = new Vector2(wallHopForce * wallHopDirection.x * -facingDirection, wallHopForce * wallHopDirection.y);
-            body.AddForce(forceToAdd, ForceMode2D.Impulse);
-        }
-        else if (isWallSliding && xInput != 0 && canJump)
-        {
-            isWallSliding = false;
+            jumpCount = maxJumps;
             jumpCount--;
             Vector2 forceToAdd = new Vector2(wallJumpForce * wallJumpDirection.x * xInput, wallJumpForce * wallJumpDirection.y);
             body.AddForce(forceToAdd, ForceMode2D.Impulse);
+            jumpTimer = 0;
+            isAttemtingToJump = false;
+            checkJumpMuliplier = true;
+            turnTimer = 0;
+            canMove = true;
+            canFlip = true;
+            hasWallJumped = true;
+            wallJumpTimer = wallJumpTimerSet;
+            lastWallJumpedDirection = -facingDirection;
         }
     }
 
@@ -277,5 +427,6 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y, wallCheck.position.z));
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        Gizmos.DrawLine(ledgePos1, ledgePos2);
     }
 }
