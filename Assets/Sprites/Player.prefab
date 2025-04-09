@@ -138,7 +138,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &2880865616976691876
 MonoBehaviour:
@@ -152,15 +152,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de34b8e838fb8934b971cf3ff69dd521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundSpeed: 0
-  jumpSpeed: 0
+  isTouchingWall: 0
+  isGrounded: 0
+  isFacingRight: 0
+  groundCheckRadius: 0
+  wallCheckDistance: 0
+  wallSlideSpeed: 0
+  movementForceInAir: 0
+  airDragMultiplier: 0.95
+  variableJumpHeightMultiplier: 0.5
+  wallHopForce: 0
+  wallJumpForce: 0
+  jumpTimerSet: 0.15
+  turnTimerSet: 0.1
+  wallHopDirection: {x: 0, y: 0}
+  wallJumpDirection: {x: 0, y: 0}
+  dashingPower: 20
+  walkSpeed: 0
+  runSpeed: 0
+  jumpForce: 0
+  smokeEffectPrefab: {fileID: 0}
   groundCheck: {fileID: 0}
+  wallCheck: {fileID: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 0
-  jumpCount: 0
   maxJumps: 2
-  grounded: 1
   groundDecay: 0
 --- !u!61 &5875583236531792129
 BoxCollider2D:
