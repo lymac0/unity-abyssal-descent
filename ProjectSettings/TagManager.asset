@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Laser
+  - tilemap
   layers:
   - Default
   - TransparentFX
@@ -11,9 +13,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
-  - Ground
-  - Enemy
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -41,8 +43,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 3643333679
+  - name: Laser
+    uniqueID: 3078246735
     locked: 0
   m_RenderingLayers:
   - Default
