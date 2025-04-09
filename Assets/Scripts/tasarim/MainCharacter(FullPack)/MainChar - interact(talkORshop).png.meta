@@ -422,7 +422,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - interact(talkORshop)_0: -613828156474392037
+      MainChar - interact(talkORshop)_1: -267408730597529820
+      MainChar - interact(talkORshop)_10: -729971134717450131
+      MainChar - interact(talkORshop)_11: -4933041760635302039
+      MainChar - interact(talkORshop)_2: -7594139220523567930
+      MainChar - interact(talkORshop)_3: -1336191035909812838
+      MainChar - interact(talkORshop)_4: 2386368680615299795
+      MainChar - interact(talkORshop)_5: 1816793551810161012
+      MainChar - interact(talkORshop)_6: -3609280432252719754
+      MainChar - interact(talkORshop)_7: -6167504054966218939
+      MainChar - interact(talkORshop)_8: -5259482279459480620
+      MainChar - interact(talkORshop)_9: -7374107511992173489
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

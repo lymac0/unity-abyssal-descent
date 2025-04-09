@@ -422,7 +422,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - ledgeclimb_0: -209160520326239932
+      MainChar - ledgeclimb_1: -7391344272807883118
+      MainChar - ledgeclimb_10: 8656131488607250500
+      MainChar - ledgeclimb_11: 2136661482849460652
+      MainChar - ledgeclimb_2: 5969759458832293661
+      MainChar - ledgeclimb_3: -2968475117227957556
+      MainChar - ledgeclimb_4: 6155834360385181136
+      MainChar - ledgeclimb_5: -3790325701909056677
+      MainChar - ledgeclimb_6: 1156330364292275811
+      MainChar - ledgeclimb_7: 4186814102288960670
+      MainChar - ledgeclimb_8: -3093571027720492700
+      MainChar - ledgeclimb_9: -7465007279968086633
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

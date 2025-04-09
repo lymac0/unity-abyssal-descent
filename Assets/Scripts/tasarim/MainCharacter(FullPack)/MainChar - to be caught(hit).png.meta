@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - to be caught(hit)_0: 8343606503484660433
+      MainChar - to be caught(hit)_1: 4340435895632164823
+      MainChar - to be caught(hit)_2: 5726630530853724063
+      MainChar - to be caught(hit)_3: 6912445650798832934
+      MainChar - to be caught(hit)_4: 5365239988234637289
+      MainChar - to be caught(hit)_5: -1660834950502470819
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
