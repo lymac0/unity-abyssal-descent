@@ -397,7 +397,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - wounded walk_0: -7405028461279461506
+      MainChar - wounded walk_1: -6182308760702181255
+      MainChar - wounded walk_10: -8409456463801958271
+      MainChar - wounded walk_2: -4296996773758177984
+      MainChar - wounded walk_3: -8409772440228740929
+      MainChar - wounded walk_4: -6822832669092820786
+      MainChar - wounded walk_5: -5728057844450142033
+      MainChar - wounded walk_6: -732328105382307622
+      MainChar - wounded walk_7: -2870475056514700778
+      MainChar - wounded walk_8: 7344720850191017162
+      MainChar - wounded walk_9: -1488701131729359312
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

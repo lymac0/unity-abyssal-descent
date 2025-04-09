@@ -397,7 +397,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - Torch(Walk)_0: 7401576550832047787
+      MainChar - Torch(Walk)_1: -2120398961280463544
+      MainChar - Torch(Walk)_10: 1404737379881495495
+      MainChar - Torch(Walk)_2: 5746054063474511949
+      MainChar - Torch(Walk)_3: 7360697979678540485
+      MainChar - Torch(Walk)_4: 4922835721811345504
+      MainChar - Torch(Walk)_5: -5924678973727081075
+      MainChar - Torch(Walk)_6: 7953438283151189236
+      MainChar - Torch(Walk)_7: -8390901009727367349
+      MainChar - Torch(Walk)_8: 8664604635295003452
+      MainChar - Torch(Walk)_9: -1114169752897313145
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

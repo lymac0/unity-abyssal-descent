@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - dash(smokeEffect)_0: 405575939336296044
+      MainChar - dash(smokeEffect)_1: -3889565230220405371
+      MainChar - dash(smokeEffect)_2: -5299883954793144817
+      MainChar - dash(smokeEffect)_3: -8116505842380493972
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

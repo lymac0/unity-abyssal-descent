@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - wounded idle_0: -5372301205449119236
+      MainChar - wounded idle_1: 7420316649078407815
+      MainChar - wounded idle_2: -3561501231455355256
+      MainChar - wounded idle_3: -379838500428631399
+      MainChar - wounded idle_4: 8294044593019093400
+      MainChar - wounded idle_5: 5698374686667875135
+      MainChar - wounded idle_6: 8495989106362443399
+      MainChar - wounded idle_7: 6158437858366935381
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

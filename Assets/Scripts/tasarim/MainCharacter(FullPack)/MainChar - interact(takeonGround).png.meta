@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - interact(takeonGround)_0: -8578441822724848758
+      MainChar - interact(takeonGround)_1: -4673161316542505841
+      MainChar - interact(takeonGround)_2: -3723180137559014897
+      MainChar - interact(takeonGround)_3: 1677042053331511042
+      MainChar - interact(takeonGround)_4: -6651228842817091255
+      MainChar - interact(takeonGround)_5: -7377528747496678177
+      MainChar - interact(takeonGround)_6: -3159640815599507409
+      MainChar - interact(takeonGround)_7: -4045411012294014945
+      MainChar - interact(takeonGround)_8: -2404725760131857249
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

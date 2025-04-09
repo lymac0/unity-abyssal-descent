@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - ledge grab_0: 2139072988014788866
+      MainChar - ledge grab_1: 5015758335983975554
+      MainChar - ledge grab_2: 8762482961141751409
+      MainChar - ledge grab_3: -7848824410233978007
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
