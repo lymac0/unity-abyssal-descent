@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     private float dashingCooldown = 1f;
     private float turnTimer;
     private float wallJumpTimer;
+    private float lastImageXpos;
 
     public float groundCheckRadius;
     public float wallCheckDistance;
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
     public float ledgeClimbYOffset1 = 0f;
     public float ledgeClimbXOffset2 = 0f;
     public float ledgeClimbYOffset2 = 0f;
+    public float distanceBetweenImages;
 
     public Vector2 wallHopDirection;
     public Vector2 wallJumpDirection;
@@ -89,6 +91,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        CheckDash();
         if (isDashing)
         {
             return;
@@ -101,6 +104,7 @@ public class PlayerController : MonoBehaviour
         CheckIfWallSliding();
         CheckJump();
         CheckLedgeClimb();
+
     }
 
     private void FixedUpdate()
@@ -200,6 +204,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Dash") && canDash)
         {
+            AttemptToDash();
             StartCoroutine(Dash());
         }
 
@@ -266,6 +271,16 @@ public class PlayerController : MonoBehaviour
         {
             body.linearVelocity = new Vector2(0, body.linearVelocityY);
         }
+    }
+
+    public void DisableFlip()
+    {
+        canFlip = false;
+    }
+
+    public void EnableFlip()
+    {
+        canFlip = true;
     }
 
     private void Flip()
@@ -392,6 +407,24 @@ public class PlayerController : MonoBehaviour
             hasWallJumped = true;
             wallJumpTimer = wallJumpTimerSet;
             lastWallJumpedDirection = -facingDirection;
+        }
+    }
+
+    private void AttemptToDash()
+    {
+        PlayerAfterImagePool.Instance.GetFromPool();
+        lastImageXpos = transform.position.x;
+    }
+
+    private void CheckDash()
+    {
+        if (isDashing)
+        {
+            if (Mathf.Abs(transform.position.x - lastImageXpos) > distanceBetweenImages)
+            {
+                PlayerAfterImagePool.Instance.GetFromPool();
+                lastImageXpos = transform.position.x;
+            }
         }
     }
 
