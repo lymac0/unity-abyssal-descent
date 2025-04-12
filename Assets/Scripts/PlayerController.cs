@@ -258,7 +258,7 @@ public class PlayerController : MonoBehaviour
             body.linearVelocity = new Vector2(body.linearVelocityX, -wallSlideSpeed);
         }
 
-        // KoÅŸma mekaniÄŸi
+        // Koþma mekaniði
         if (Input.GetButtonDown("Walk"))
         {
             isWalking = !isWalking;
@@ -266,7 +266,7 @@ public class PlayerController : MonoBehaviour
 
         movementSpeed = isWalking ? walkSpeed : runSpeed;
 
-        // HÄ±zÄ±n sÄ±fÄ±rlanmasÄ±
+        // Hýzýn sýfýrlanmasý
         if (Mathf.Abs(body.linearVelocity.x) < 0.3f)
         {
             body.linearVelocity = new Vector2(0, body.linearVelocityY);
@@ -345,7 +345,7 @@ public class PlayerController : MonoBehaviour
             // Wall Jump
             if (!isGrounded && isTouchingWall && xInput != 0 && xInput != facingDirection)
             {
-                Debug.Log("Wall Jump atÄ±ldÄ±!");
+                Debug.Log("Wall Jump atýldý!");
                 WallJump();
             }
             else if (isGrounded)
