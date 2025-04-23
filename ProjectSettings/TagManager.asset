@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Laser
   - tilemap
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
