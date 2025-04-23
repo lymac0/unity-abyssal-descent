@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Laser
   - tilemap
+  - item
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - ground
   - 
   - 
   - 
@@ -48,3 +49,4 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
+  - ground

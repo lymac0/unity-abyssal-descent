@@ -522,7 +522,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - crouch(attack)_0: 7734346688882280114
+      MainChar - crouch(attack)_1: -2003350992492371986
+      MainChar - crouch(attack)_10: 6720240934071192044
+      MainChar - crouch(attack)_11: -7383131876018057635
+      MainChar - crouch(attack)_12: -5050904853753459221
+      MainChar - crouch(attack)_13: 6648322294020274744
+      MainChar - crouch(attack)_14: -6111515393026361100
+      MainChar - crouch(attack)_15: -917714089512736409
+      MainChar - crouch(attack)_2: -4258776170556266699
+      MainChar - crouch(attack)_3: -8912010767811948262
+      MainChar - crouch(attack)_4: -2032611139492478650
+      MainChar - crouch(attack)_5: 8165988638056832693
+      MainChar - crouch(attack)_6: -1531388546524510770
+      MainChar - crouch(attack)_7: 4303229765803544165
+      MainChar - crouch(attack)_8: -107231756810849714
+      MainChar - crouch(attack)_9: 4054132386203400245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

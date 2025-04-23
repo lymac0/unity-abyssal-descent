@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      elevator2_0: -7898146440014968545
+      elevator2_1: 5837265537396366619
+      elevator2_2: -11105408713447712
+      elevator2_3: -267558623865363918
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

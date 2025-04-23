@@ -1,48 +1,56 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Collections;
 
 public class Interactable : MonoBehaviour
 {
-    public Transform player; // Oyuncunun Transform'u
-    public GameObject interactionText; // "E Basın" yazısı
-    public GameObject fullScreenPanel; // Bilgi ekranı
-    public TextMeshProUGUI infoText; // Bilgilendirici metin
-    public Camera mainCamera; // Ana Kamera
-    public float zoomInSize = 3f; // Yakınlaştırma seviyesi
-    public float zoomOutSize = 5f; // Normal kamera uzaklığı
-    public float zoomSpeed = 2f; // Yakınlaşma/Uzaklaşma hızı
-    public float interactRange = 2.0f; // Etkileşim mesafesi
+    public Transform player;
+    public GameObject interactionText;
+    public GameObject fullScreenPanel;
+    public TextMeshProUGUI infoText;
+    public Camera mainCamera;
+    public float zoomInSize = 3f;
+    public float zoomOutSize = 5f;
+    public float interactRange = 2.0f;
+    public Button closeButton;
 
-    private bool canInteract = false; // Oyuncu etkileşim mesafesinde mi?
-    private bool isPanelOpen = false; // Panel açık mı?
-    private Vector3 originalPosition; // Kameranın orijinal konumu
-    private float originalSize; // Kameranın orijinal zoom değeri
+    private bool canInteract = false;
+    private bool isPanelOpen = false;
+    private Vector3 originalPosition;
+    private float originalSize;
 
     [TextArea(3, 10)]
-    public string infoMessage; // Bilgi metni
+    public string infoMessage;
 
     private void Start()
     {
         if (mainCamera == null)
-        {
-            mainCamera = Camera.main; // Eğer kamera atanmadıysa ana kamerayı al
-        }
+            mainCamera = Camera.main;
 
-        // Kameranın orijinal pozisyonunu ve büyüklüğünü kaydet
         originalPosition = mainCamera.transform.position;
         originalSize = mainCamera.orthographicSize;
 
-        interactionText.SetActive(false); // Başlangıçta "E Basın" yazısını kapat
-        fullScreenPanel.SetActive(false); // Bilgi panelini başlangıçta kapalı tut
+        interactionText.SetActive(false);
+        fullScreenPanel.SetActive(false);
+
+        // â— Kapatma butonuna tÄ±klanÄ±nca paneli kapat
+        if (closeButton != null)
+        {
+            closeButton.onClick.AddListener(CloseInfoPanel);
+        }
+
+        // â— Bilgi metni iÃ§eriÄŸe gÃ¶re ayarlanmalÄ±
+        if (infoText != null && !string.IsNullOrEmpty(infoMessage))
+        {
+            infoText.text = infoMessage;
+        }
     }
 
     private void Update()
     {
-        if (isInRange(player, transform, interactRange))
+        if (IsInRange(player, transform, interactRange))
         {
-            interactionText.SetActive(true);
+            interactionText.SetActive(!isPanelOpen); // Panel aÃ§Ä±ksa "E" yazÄ±sÄ± gÃ¶sterme
             canInteract = true;
         }
         else
@@ -57,7 +65,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private bool isInRange(Transform player, Transform target, float range)
+    private bool IsInRange(Transform player, Transform target, float range)
     {
         float distance = Vector2.Distance(player.position, target.position);
         return distance <= range;
@@ -65,45 +73,32 @@ public class Interactable : MonoBehaviour
 
     public void ToggleInfoPanel()
     {
-        isPanelOpen = !isPanelOpen; // Panelin açık olup olmadığını tersine çevir
+        isPanelOpen = !isPanelOpen;
         fullScreenPanel.SetActive(isPanelOpen);
 
         if (isPanelOpen)
         {
-            infoMessage = infoText.text; // Bilgi metnini güncelle
-            StopAllCoroutines();
-            Vector3 zoomPosition = new Vector3(player.position.x, player.position.y, -10);
-            StartCoroutine(SmoothZoom(zoomPosition, zoomInSize));
+            interactionText.SetActive(false); // Panel aÃ§Ä±ksa "E" yazÄ±sÄ±nÄ± gizle
+            InstantZoom(new Vector3(player.position.x, player.position.y, -10), zoomInSize);
+            infoMessage = infoText.text;
         }
         else
         {
-            StopAllCoroutines();
-            StartCoroutine(SmoothZoom(originalPosition, originalSize));
+            CloseInfoPanel();
         }
     }
-    private IEnumerator SmoothZoom(Vector3 targetPosition, float targetSize)
+
+    public void CloseInfoPanel()
     {
-        float elapsedTime = 0f;
-        float duration = 1f / zoomSpeed; // Geçiş süresi
+        isPanelOpen = false;
+        fullScreenPanel.SetActive(false);
+        interactionText.SetActive(true);
+        InstantZoom(originalPosition, originalSize);
+    }
 
-        Vector3 startPosition = mainCamera.transform.position;
-        float startSize = mainCamera.orthographicSize;
-
-        while (elapsedTime < duration)
-        {
-            elapsedTime += Time.deltaTime;
-            float t = elapsedTime / duration;
-
-            // Kamera konumunu ve büyüklüğünü yumuşakça değiştir
-            mainCamera.transform.position = Vector3.Lerp(startPosition, targetPosition, t);
-            mainCamera.orthographicSize = Mathf.Lerp(startSize, targetSize, t);
-
-            yield return null;
-        }
-
-        // Son değerleri tam olarak uygula
+    private void InstantZoom(Vector3 targetPosition, float targetSize)
+    {
         mainCamera.transform.position = targetPosition;
         mainCamera.orthographicSize = targetSize;
     }
-
 }

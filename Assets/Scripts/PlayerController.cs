@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     public bool grounded;
     public float drag;
+
 
     private void Awake()
     {
