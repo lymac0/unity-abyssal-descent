@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -7,41 +7,69 @@ public class PortalController : MonoBehaviour
 {
     public Image fadeImage;
     public Animator portalAnimator;
-    public string targetSceneName; // Ge�ilecek sahne ad�
-    public string spawnPointTag = "SpawnPoint"; // Yeni sahnedeki oyuncu do�ma yeri i�in tag
+    public string targetSceneName;
+    public string spawnPointTag = "SpawnPoint";
+
+    private GameObject player;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            DontDestroyOnLoad(other.gameObject); // Oyuncuyu sahne de�i�iminde koru
-            StartCoroutine(PortalTransition(other.gameObject));
+            player = other.gameObject;
+            DontDestroyOnLoad(player);
+            StartCoroutine(PortalTransition());
         }
     }
 
-    private IEnumerator PortalTransition(GameObject player)
+    private IEnumerator PortalTransition()
     {
+        Debug.Log("PortalTransition başladı, oyuncu: " + player.name);
         portalAnimator.SetTrigger("Activate");
-        yield return new WaitForSeconds(2.1f);
+        yield return new WaitForSeconds(1.5f);
+
+        // 🎯 FadeImage'ı aktif et!
+        fadeImage.gameObject.SetActive(true);
+
+        Debug.Log("Fade to Black başlıyor...");
         yield return StartCoroutine(FadeToBlack());
 
-        // Sahneyi y�kle
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(targetSceneName);
-        while (!asyncLoad.isDone)
-        {
-            yield return null;
-        }
+        // Sahne değişimi başlat
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.LoadScene(targetSceneName);
+    }
 
-        // Yeni sahnedeki spawn noktas�n� bul
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("Yeni sahne yüklendi: " + scene.name);
+
         GameObject spawnPoint = GameObject.FindWithTag(spawnPointTag);
         if (spawnPoint != null)
         {
             player.transform.position = spawnPoint.transform.position;
+            Debug.Log("Player taşındı: " + player.transform.position);
+        }
+        else
+        {
+            Debug.LogWarning("SpawnPoint bulunamadı!");
         }
 
-        yield return new WaitForSeconds(0.5f);
-        yield return StartCoroutine(FadeFromBlack());
+        SceneManager.MoveGameObjectToScene(player, SceneManager.GetActiveScene());
+
+        // FADE FROM BLACK yapıyoruz
+        GameObject fadeObj = new GameObject("FadeRunner");
+        FadeRunner runner = fadeObj.AddComponent<FadeRunner>();
+        runner.fadeImage = fadeImage;
+        runner.RunFadeIn(() =>
+        {
+            // 🎯 FadeFromBlack bittikten sonra FadeImage'ı pasifleştir
+            fadeImage.gameObject.SetActive(false);
+        });
+
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+
 
     private IEnumerator FadeToBlack()
     {
@@ -60,6 +88,7 @@ public class PortalController : MonoBehaviour
 
     private IEnumerator FadeFromBlack()
     {
+        Debug.Log("Fade from Black başlıyor...");
         float duration = 1f;
         float elapsed = 0f;
         Color color = fadeImage.color;
