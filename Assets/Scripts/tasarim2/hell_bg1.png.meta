@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 04da753e1faecf24bac9ecb7252275d5
+guid: 72bd3a42d74e4c44aa88c37042c1cc6f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6961198124866637508
-    second: sayfa_0
+      213: -7544516502377069886
+    second: hell_bg1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sayfa_0
+      name: hell_bg1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 495
-        height: 654
+        width: 2048
+        height: 1078
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c31753cff2bd46f90800000000000000
-      internalID: -6961198124866637508
+      spriteID: 2c20eb1b63e7c4790800000000000000
+      internalID: -7544516502377069886
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      sayfa_0: -6961198124866637508
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

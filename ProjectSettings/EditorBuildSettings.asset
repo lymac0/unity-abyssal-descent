@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/ilkKatman.unity
+    guid: 7272aab7b6be6f648b1a7d0b79b182e2
+  - enabled: 1
+    path: Assets/Scenes/ikincikatman.unity
+    guid: f1e9b5ccf4e23e84b93e64677b1ed8bb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
