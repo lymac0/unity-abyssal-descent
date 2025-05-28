@@ -29,7 +29,6 @@ public class PlayerAfterImageSprite : MonoBehaviour
         transform.position = player.position;
         transform.rotation = player.rotation;
         timeActivated = Time.time;
-
     }
 
     private void Update()

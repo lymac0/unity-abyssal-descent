@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private bool isWalking = false;
-    private bool canDash = true;
     private bool canNormalJump;
     private bool canWallJump;
     private bool isDashing;
@@ -28,14 +27,15 @@ public class PlayerController : MonoBehaviour
     private float jumpTimer;
     private float xInput;
     private float movementSpeed;
-    private float dashingTime = 0.3f;
-    private float dashingCooldown = 1f;
     private float turnTimer;
     private float wallJumpTimer;
     private float lastImageXpos;
     private float knockbackStartTime;
     [SerializeField]
     private float knockbackDuration;
+    private float dashTimeLeft;
+    private float lastDash = -100f;
+
 
     public float groundCheckRadius;
     public float wallCheckDistance;
@@ -53,6 +53,9 @@ public class PlayerController : MonoBehaviour
     public float ledgeClimbXOffset2 = 0f;
     public float ledgeClimbYOffset2 = 0f;
     public float distanceBetweenImages;
+    public float dashTime;
+    public float dashSpeed;
+    public float dashCoolDown;
 
     public Vector2 wallHopDirection;
     public Vector2 wallJumpDirection;
@@ -64,7 +67,6 @@ public class PlayerController : MonoBehaviour
     private Vector2 ledgePos1;
     private Vector2 ledgePos2;
 
-    [SerializeField] private float dashingPower = 20f;
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
     [SerializeField] private float jumpForce;
@@ -100,10 +102,6 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         CheckDash();
-        if (isDashing)
-        {
-            return;
-        }
         GetInput();
         CheckMovementDirection();
         UpdateAnimations();
@@ -117,10 +115,6 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isDashing)
-        {
-            return;
-        }
         CheckSurroundings();
         ApplyFriction();
     }
@@ -231,10 +225,10 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Dash") && canDash)
+        if (Input.GetButtonDown("Dash"))
         {
-            AttemptToDash();
-            StartCoroutine(Dash());
+            if (Time.time >= (lastDash + dashCoolDown))
+                AttemptToDash();
         }
 
         if (Input.GetButtonDown("Horizontal") && isTouchingWall)
@@ -267,10 +261,6 @@ public class PlayerController : MonoBehaviour
     }
     private void MoveWithInput()
     {
-        if (isDashing)
-        {
-            return;
-        }
         if (!isGrounded && !isWallSliding && xInput == 0 && !knockback)
         {
             body.linearVelocity = new Vector2(body.linearVelocityX * airDragMultiplier, body.linearVelocityY);
@@ -441,8 +431,19 @@ public class PlayerController : MonoBehaviour
 
     private void AttemptToDash()
     {
+        isDashing = true;
+        dashTimeLeft = dashTime;
+        lastDash = Time.time;
+
         PlayerAfterImagePool.Instance.GetFromPool();
         lastImageXpos = transform.position.x;
+
+        // -- Smoke Effect
+        float dashDirection = isFacingRight ? 1 : -1;
+        Vector3 smokePosition = transform.position + new Vector3(dashDirection * -0.5f, -0.75f, 0);
+        GameObject smoke = Instantiate(smokeEffectPrefab, smokePosition, Quaternion.identity);
+        smoke.transform.localScale = new Vector3(dashDirection, 1, 1);
+        Destroy(smoke, 0.5f);
     }
 
     public int GetFacingDirection()
@@ -454,41 +455,30 @@ public class PlayerController : MonoBehaviour
     {
         if (isDashing)
         {
-            if (Mathf.Abs(transform.position.x - lastImageXpos) > distanceBetweenImages)
+            if(dashTimeLeft > 0)
             {
-                PlayerAfterImagePool.Instance.GetFromPool();
-                lastImageXpos = transform.position.x;
+                canMove = false;
+                canFlip = false;
+                body.linearVelocity = new Vector2(dashSpeed * facingDirection, 0.0f);
+                dashTimeLeft -= Time.deltaTime;
+
+                if (Mathf.Abs(transform.position.x - lastImageXpos) > distanceBetweenImages)
+                {
+                    PlayerAfterImagePool.Instance.GetFromPool();
+                    lastImageXpos = transform.position.x;
+                }
             }
+
+            if(dashTimeLeft <= 0 || isTouchingWall)
+            {
+                isDashing = false;
+                canMove = true;
+                canFlip = true;
+            }
+            
         }
     }
 
-    private IEnumerator Dash()
-    {
-        canDash = false;
-        isDashing = true;
-        anim.SetBool("isDashing", true);
-
-        float originalGravity = body.gravityScale;
-        body.gravityScale = 0f;
-
-        float dashDirection = isFacingRight ? 1 : -1;
-
-        Vector3 smokePosition = transform.position + new Vector3(dashDirection * -0.5f, -0.75f, 0);
-        GameObject smoke = Instantiate(smokeEffectPrefab, smokePosition, Quaternion.identity);
-        smoke.transform.localScale = new Vector3(dashDirection, 1, 1);
-        Destroy(smoke, 0.5f);
-
-        body.linearVelocity = new Vector2(dashDirection * dashingPower, 0f);
-        yield return new WaitForSeconds(dashingTime);
-        body.gravityScale = originalGravity;
-        isDashing = false;
-        anim.SetBool("isDashing", false);
-        body.linearVelocity = new Vector2(0, body.linearVelocityY);
-        yield return new WaitForSeconds(0.15f);
-
-        yield return new WaitForSeconds(dashingCooldown);
-        canDash = true;
-    }
 
     private void OnDrawGizmos()
     {
