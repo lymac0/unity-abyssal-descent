@@ -122,12 +122,12 @@ TextureImporter:
       name: 2layers_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
+        x: 20
+        y: 14
         width: 566
         height: 309
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -149,7 +149,7 @@ TextureImporter:
         width: 68
         height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -166,12 +166,12 @@ TextureImporter:
       name: 2layers_2
       rect:
         serializedVersion: 2
-        x: 448
-        y: 9
-        width: 66
-        height: 97
+        x: 449
+        y: 12
+        width: 63
+        height: 93
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -184,11 +184,121 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 2layers_3
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 82
+        width: 35
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90cac34b539fdbf489781f03092518ec
+      internalID: 2134858984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2layers_4
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 50
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d47ee2514925ed4c84ae3d1ed573f24
+      internalID: 683543666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2layers_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 115
+        width: 33
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63dfd49fa2f73f849b43f3b19fbe1f75
+      internalID: -779711136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2layers_6
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 184
+        width: 30
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e21177fc67be2a4f9f2bdbfde97c224
+      internalID: -396121876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2layers_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 116
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5772a641423e149a37638f230b9803
+      internalID: -414389333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c7e4118120c076244ac10021c19d7252
     internalID: 0
     vertices: []
     indices: 
@@ -201,6 +311,11 @@ TextureImporter:
       2layers_0: 1621727905988719347
       2layers_1: 7006513351528676393
       2layers_2: 2250647686955212007
+      2layers_3: 2134858984
+      2layers_4: 683543666
+      2layers_5: -779711136
+      2layers_6: -396121876
+      2layers_7: -414389333
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

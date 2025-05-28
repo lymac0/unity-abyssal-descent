@@ -12,6 +12,33 @@ public class PortalController : MonoBehaviour
 
     private GameObject player;
 
+    private void OnEnable()
+    {
+        PlayerEvents.OnPlayerSpawned += HandlePlayerSpawned;
+    }
+
+    private void OnDisable()
+    {
+        PlayerEvents.OnPlayerSpawned -= HandlePlayerSpawned;
+    }
+
+    private void HandlePlayerSpawned(GameObject newPlayer)
+    {
+        player = newPlayer;
+    }
+
+    private void Start()
+    {
+        if (player == null)
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+            {
+                player = playerObj;
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -28,48 +55,42 @@ public class PortalController : MonoBehaviour
         portalAnimator.SetTrigger("Activate");
         yield return new WaitForSeconds(1.5f);
 
-        // 🎯 FadeImage'ı aktif et!
         fadeImage.gameObject.SetActive(true);
-
         Debug.Log("Fade to Black başlıyor...");
         yield return StartCoroutine(FadeToBlack());
 
-        // Sahne değişimi başlat
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene(targetSceneName);
     }
-
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("Yeni sahne yüklendi: " + scene.name);
 
         GameObject spawnPoint = GameObject.FindWithTag(spawnPointTag);
-        if (spawnPoint != null)
+        if (spawnPoint != null && player != null)
         {
             player.transform.position = spawnPoint.transform.position;
             Debug.Log("Player taşındı: " + player.transform.position);
         }
         else
         {
-            Debug.LogWarning("SpawnPoint bulunamadı!");
+            Debug.LogWarning("SpawnPoint veya Player bulunamadı!");
         }
 
-        SceneManager.MoveGameObjectToScene(player, SceneManager.GetActiveScene());
+        if (player != null)
+            SceneManager.MoveGameObjectToScene(player, SceneManager.GetActiveScene());
 
-        // FADE FROM BLACK yapıyoruz
         GameObject fadeObj = new GameObject("FadeRunner");
         FadeRunner runner = fadeObj.AddComponent<FadeRunner>();
         runner.fadeImage = fadeImage;
         runner.RunFadeIn(() =>
         {
-            // 🎯 FadeFromBlack bittikten sonra FadeImage'ı pasifleştir
             fadeImage.gameObject.SetActive(false);
         });
 
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
-
 
     private IEnumerator FadeToBlack()
     {

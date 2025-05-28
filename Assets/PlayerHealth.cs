@@ -1,43 +1,74 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
     private Animator animator;
+    private bool isDead = false;
 
     void Start()
     {
         animator = GetComponent<Animator>();
     }
 
-    private bool isDead = false; // Oyuncunun öldüğünü takip etmek için değişken ekle
-
     public void Die()
     {
-        if (isDead) return; // Eğer oyuncu zaten öldüyse tekrar çağrılmasını engelle
+        if (isDead) return;
 
-        isDead = true; // Oyuncu öldü olarak işaretle
+        isDead = true;
 
         Debug.Log("Player is dead!");
 
         if (animator != null)
-        {
             animator.SetBool("isDead", true);
-        }
         else
-        {
             Debug.LogError("Animator is missing on Player!");
-        }
 
         StartCoroutine(RestartAfterDelay(1.5f));
     }
 
-
     private IEnumerator RestartAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+
+        // 1. Sahneyi yeniden yÃ¼kle
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        // 2. KayÄ±tlÄ± pozisyona dÃ¶ndÃ¼r
+        // Sahne yÃ¼klendikten hemen sonra Ã§alÄ±ÅŸmasÄ± iÃ§in gecikmeli Ã§aÄŸÄ±r
+        SceneManager.sceneLoaded += OnSceneReloaded;
+    }
+
+    // 3. Sahne yÃ¼klendikten sonra konumu geri getir
+    private void OnSceneReloaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("â†© Sahne yeniden yÃ¼klendi, yeni Player oluÅŸturuluyor...");
+
+
+        // Eski player'Ä± sil (eÄŸer varsa)
+        GameObject oldPlayer = GameObject.FindGameObjectWithTag("Player");
+        if (oldPlayer != null)
+            Destroy(oldPlayer);
+
+        // Player prefab'Ä±nÄ± sahneye ekle (Resources klasÃ¶rÃ¼nden)
+        GameObject playerPrefab = Resources.Load<GameObject>("Player"); // Assets/Resources/Player.prefab olmalÄ±
+        GameObject newPlayer = Instantiate(playerPrefab);
+        newPlayer.tag = "Player";
+
+        // KayÄ±tlÄ± verileri uygula
+        SaveController saveController = Object.FindFirstObjectByType<SaveController>();
+        if (saveController != null)
+        {
+            saveController.ApplySavedDataToPlayer(newPlayer);
+        }
+        else
+        {
+            Debug.LogError("âŒ SaveController bulunamadÄ±!");
+        }
+        PlayerEvents.RaisePlayerSpawned(newPlayer);
+
+        SceneManager.sceneLoaded -= OnSceneReloaded;
     }
 
 
@@ -50,37 +81,37 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.CompareTag("Laser"))
         {
-            Debug.Log("Lazerle çarpıştı!");
+            Debug.Log("Lazerle Ã§arpÄ±ÅŸtÄ±!");
 
             Animator laserAnimator = collision.GetComponent<Animator>();
-
             if (laserAnimator == null)
             {
-                Debug.LogError("HATA: Lazerin Animator bileşeni eksik!");
+                Debug.LogError("HATA: Lazerin Animator bileÅŸeni eksik!");
                 return;
             }
 
             StartCoroutine(CheckLaserState(laserAnimator));
         }
-    }
 
+        if (collision.CompareTag("lava"))
+        {
+            Debug.Log("Lava ile Ã§arpÄ±ÅŸtÄ±! Oyuncu Ã¶lÃ¼yor...");
+            Die();
+        }
+    }
 
     private IEnumerator CheckLaserState(Animator laserAnimator)
     {
-        yield return new WaitForSeconds(0.3f); // Bekleme süresini 0.3 saniyeye çıkardık
-
-        Debug.Log("Lazer animasyon durumu: " + laserAnimator.GetCurrentAnimatorStateInfo(0).IsName("laser_shooter"));
+        yield return new WaitForSeconds(0.3f);
 
         if (laserAnimator.GetCurrentAnimatorStateInfo(0).IsName("laser_shooter"))
         {
-            Debug.Log("Lazer aktif, oyuncu ölüyor!");
+            Debug.Log("Lazer aktif, oyuncu Ã¶lÃ¼yor!");
             Die();
         }
         else
         {
-            Debug.Log("Lazer ateşlenmiyor, oyuncu ölmedi.");
+            Debug.Log("Lazer ateÅŸlenmiyor, oyuncu Ã¶lmedi.");
         }
     }
-
-
 }

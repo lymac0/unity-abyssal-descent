@@ -22,6 +22,21 @@ public class Interactable : MonoBehaviour
     [TextArea(3, 10)]
     public string infoMessage;
 
+    private void OnEnable()
+    {
+        PlayerEvents.OnPlayerSpawned += HandlePlayerSpawned;
+    }
+
+    private void OnDisable()
+    {
+        PlayerEvents.OnPlayerSpawned -= HandlePlayerSpawned;
+    }
+
+    private void HandlePlayerSpawned(GameObject newPlayer)
+    {
+        player = newPlayer.transform;
+    }
+
     private void Start()
     {
         if (mainCamera == null)
@@ -33,24 +48,20 @@ public class Interactable : MonoBehaviour
         interactionText.SetActive(false);
         fullScreenPanel.SetActive(false);
 
-        // ❗ Kapatma butonuna tıklanınca paneli kapat
         if (closeButton != null)
-        {
             closeButton.onClick.AddListener(CloseInfoPanel);
-        }
 
-        // ❗ Bilgi metni içeriğe göre ayarlanmalı
         if (infoText != null && !string.IsNullOrEmpty(infoMessage))
-        {
             infoText.text = infoMessage;
-        }
     }
 
     private void Update()
     {
+        if (player == null) return;
+
         if (IsInRange(player, transform, interactRange))
         {
-            interactionText.SetActive(!isPanelOpen); // Panel açıksa "E" yazısı gösterme
+            interactionText.SetActive(!isPanelOpen);
             canInteract = true;
         }
         else
@@ -60,9 +71,7 @@ public class Interactable : MonoBehaviour
         }
 
         if (canInteract && Input.GetKeyDown(KeyCode.E))
-        {
             ToggleInfoPanel();
-        }
     }
 
     private bool IsInRange(Transform player, Transform target, float range)
@@ -78,7 +87,7 @@ public class Interactable : MonoBehaviour
 
         if (isPanelOpen)
         {
-            interactionText.SetActive(false); // Panel açıksa "E" yazısını gizle
+            interactionText.SetActive(false);
             InstantZoom(new Vector3(player.position.x, player.position.y, -10), zoomInSize);
             infoMessage = infoText.text;
         }

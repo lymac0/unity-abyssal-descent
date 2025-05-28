@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ikincikatman.unity
     guid: f1e9b5ccf4e23e84b93e64677b1ed8bb
+  - enabled: 1
+    path: Assets/Scenes/Katman3.unity
+    guid: 367de3018ed5e224688dc1c5fee3c8c5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

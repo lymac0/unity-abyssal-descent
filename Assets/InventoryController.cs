@@ -18,17 +18,6 @@ public class InventoryController : MonoBehaviour
         itemDictionary = UnityEngine.Object.FindFirstObjectByType<ItemDictionary>();
 
 
-        //for (int i = 0; i < slotCount; i++)
-        //{
-        //    slot slot = Instantiate(slotPrefab, inventoryPanel.transform).GetComponent<slot>();
-        //    if(i < itemPrefabs.Length)
-        //    {
-        //        GameObject item = Instantiate(itemPrefabs[i], slot.transform);
-        //        item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-        //        slot.currentItem = item;
-
-        //    }
-        //}
     }
 
     public List<InventorySaveData> GetInventoryItems()
@@ -136,6 +125,23 @@ public class InventoryController : MonoBehaviour
         Debug.LogWarning("⚠ Inventory dolu!");
     }
 
+    public void ClearInventory()
+    {
+        Debug.Log("🧹 Envanter temizleniyor...");
+        foreach (Transform child in inventoryPanel.transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
+    public void InitializeEmptySlots()
+    {
+        Debug.Log($"🧱 {slotCount} boş slot oluşturuluyor...");
+        for (int i = 0; i < slotCount; i++)
+        {
+            Instantiate(slotPrefab, inventoryPanel.transform);
+        }
+    }
 
 
 }

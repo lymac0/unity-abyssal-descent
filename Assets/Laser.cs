@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using UnityEngine;
 
 public class Laser : MonoBehaviour
@@ -12,9 +12,18 @@ public class Laser : MonoBehaviour
         laserAnimator = GetComponent<Animator>();
         laserCollider = GetComponent<Collider2D>();
 
-        if (laserCollider != null)
+        if (laserAnimator == null)
         {
-            laserCollider.enabled = false; // Başlangıçta kapalı
+            Debug.LogWarning("âš ï¸ Laser: Animator bileÅŸeni eksik!");
+        }
+
+        if (laserCollider == null)
+        {
+            Debug.LogWarning("âš ï¸ Laser: Collider2D bileÅŸeni eksik!");
+        }
+        else
+        {
+            laserCollider.enabled = false;
         }
 
         StartCoroutine(FireLaser());
@@ -27,18 +36,18 @@ public class Laser : MonoBehaviour
             if (laserAnimator != null)
             {
                 laserAnimator.SetTrigger("Fire");
-
-                if (laserCollider != null)
-                {
-                    laserCollider.enabled = true; // Ateşleme anında Collider'ı aç
-                }
             }
-
-            yield return new WaitForSeconds(1f); // Ateşleme süresi
 
             if (laserCollider != null)
             {
-                laserCollider.enabled = false; // Ateşleme bittikten sonra kapat
+                laserCollider.enabled = true;
+            }
+
+            yield return new WaitForSeconds(1f); // AteÅŸleme sÃ¼resi
+
+            if (laserCollider != null)
+            {
+                laserCollider.enabled = false;
             }
 
             yield return new WaitForSeconds(fireInterval - 1f);

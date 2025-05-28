@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -46,7 +46,7 @@ public class NPC : MonoBehaviour
                 }
                 else
                 {
-                    Interact(); // Diyalog baþlamamýþsa baþlat
+                    Interact(); // Diyalog baÅŸlamamÄ±ÅŸsa baÅŸlat
                 }
             }
         }
@@ -126,4 +126,19 @@ public class NPC : MonoBehaviour
         float distance = Vector2.Distance(player.position, target.position);
         return distance <= range;
     }
+    private void OnEnable()
+    {
+        PlayerEvents.OnPlayerSpawned += HandlePlayerSpawned;
+    }
+
+    private void OnDisable()
+    {
+        PlayerEvents.OnPlayerSpawned -= HandlePlayerSpawned;
+    }
+
+    private void HandlePlayerSpawned(GameObject newPlayer)
+    {
+        playerTransform = newPlayer.transform;
+    }
+
 }
