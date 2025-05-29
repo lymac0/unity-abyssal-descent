@@ -9,6 +9,7 @@ TagManager:
   - item
   - SpawnPoint
   - lava
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - Player
   - Ground
   - Enemy
-  - 
-  - 
+  - Damageable
+  - Dead
   - 
   - 
   - 
@@ -50,6 +51,23 @@ TagManager:
     locked: 0
   - name: Laser
     uniqueID: 3078246735
+  - name: Background
+    uniqueID: 3643333679
+    locked: 0
+  - name: Decoration
+    uniqueID: 1738892151
+    locked: 0
+  - name: Platforms
+    uniqueID: 3291316327
+    locked: 0
+  - name: Enemy
+    uniqueID: 1808025773
+    locked: 0
+  - name: Player
+    uniqueID: 1232524273
+    locked: 0
+  - name: Foreground Decoration
+    uniqueID: 3159322755
     locked: 0
   m_RenderingLayers:
   - Default
