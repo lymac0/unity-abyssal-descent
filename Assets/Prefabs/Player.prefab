@@ -125,7 +125,7 @@ Transform:
   m_GameObject: {fileID: 7752305240178188009}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.08, y: 4.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -227,7 +227,7 @@ MonoBehaviour:
   maxHealth: 50
   deathChunkParticle: {fileID: 5495108645291021755, guid: e620360726fd84d44b28c5b0b64cf68b, type: 3}
   deathBloodParticle: {fileID: 4363098857914301672, guid: b8448f2def64ab246bfaf9000c3a9979, type: 3}
-  healthBar: {fileID: 629806326156429237, guid: 3d2bd01327bda994b845772bad308178, type: 3}
+  healthBar: {fileID: 0}
 --- !u!114 &5971134691236834708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,6 +294,7 @@ MonoBehaviour:
   inputTimer: 0.2
   attack1Range: 0.8
   attack1Damage: 10
+  stunDamageAmount: 1
   attack1HitBoxPos: {fileID: 21092443197361289}
   WhatIsDamageable:
     serializedVersion: 2

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hell_bg1 1_0: 2201352123254008527
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
