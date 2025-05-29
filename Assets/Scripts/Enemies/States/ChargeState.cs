@@ -1,15 +1,15 @@
 using UnityEngine;
 
-public class PlayerDetectedState : State
+public class ChargeState : State
 {
-    protected D_PlayerDetected stateData;
+    protected D_ChargeState stateData;
 
     protected bool isPlayerInMinAgroRange;
-    protected bool isPlayerInMaxAgroRange;
-    protected bool performLongRangeAction;
+    protected bool isDetectingLedge;
+    protected bool isDetectingWall;
+    protected bool isChargeTimeOver;
     protected bool performCloseRangeAction;
-
-    public PlayerDetectedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetected stateData) : base(entity, stateMachine, animBoolName)
+    public ChargeState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_ChargeState stateData) : base(entity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
     }
@@ -19,7 +19,8 @@ public class PlayerDetectedState : State
         base.DoChecks();
 
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
-        isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
+        isDetectingLedge = entity.CheckLedge();
+        isDetectingWall = entity.CheckWall();
 
         performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
     }
@@ -28,8 +29,8 @@ public class PlayerDetectedState : State
     {
         base.Enter();
 
-        performLongRangeAction = false;
-        entity.SetVelocity(0f);
+        isChargeTimeOver = false;
+        entity.SetVelocity(stateData.chargeSpeed);
     }
 
     public override void Exit()
@@ -41,9 +42,9 @@ public class PlayerDetectedState : State
     {
         base.LogicUpdate();
 
-        if(Time.time >= startTime + stateData.longRangeActionTime)
+        if(Time.time >= startTime + stateData.chargeTime)
         {
-            performLongRangeAction = true;
+            isChargeTimeOver = true;
         }
     }
 

@@ -9,13 +9,15 @@ public class PlayerCombatController : MonoBehaviour
     [SerializeField]
     private float inputTimer, attack1Range, attack1Damage;
     [SerializeField]
+    private float stunDamageAmount = 1f;
+    [SerializeField]
     private Transform attack1HitBoxPos;
     [SerializeField]
     private LayerMask WhatIsDamageable;
     private bool gotInput, isAttacking, isFirstAttack;
 
     private float lastInputTime = Mathf.NegativeInfinity;
-    private float[] attackDetails = new float[2];
+    private AttackDetails attackDetails;
     private Animator anim;
 
     private PlayerController PC;
@@ -71,11 +73,13 @@ public class PlayerCombatController : MonoBehaviour
     {
         Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attack1HitBoxPos.position, attack1Range, WhatIsDamageable);
 
-        attackDetails[0] = attack1Damage;
-        attackDetails[1] = transform.position.x;
+        attackDetails.damageAmount = attack1Damage;
+        attackDetails.position = transform.position;
+        attackDetails.stunDamageAmount = stunDamageAmount;
 
         foreach (Collider2D collider in detectedObjects)
         {
+            print("Hit");
             collider.transform.parent.SendMessage("Damage", attackDetails);
         }
     }
@@ -87,15 +91,15 @@ public class PlayerCombatController : MonoBehaviour
         anim.SetBool("attack1", false);
     }
 
-    private void Damage(float[] attackDetails)
+    private void Damage(AttackDetails attackDetails)
     {
         if (!PC.GetDashStatus())
         {
             int direction;
 
-            PS.DecreaseHealth(attackDetails[0]);
+            PS.DecreaseHealth(attackDetails.damageAmount);
 
-            if (attackDetails[1] < transform.position.x)
+            if (attackDetails.position.x < transform.position.x)
             {
                 direction = 1;
             }
