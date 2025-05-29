@@ -1,48 +1,67 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Collections;
 
 public class Interactable : MonoBehaviour
 {
-    public Transform player; // Oyuncunun Transform'u
-    public GameObject interactionText; // "E Basýn" yazýsý
-    public GameObject fullScreenPanel; // Bilgi ekraný
-    public TextMeshProUGUI infoText; // Bilgilendirici metin
-    public Camera mainCamera; // Ana Kamera
-    public float zoomInSize = 3f; // Yakýnlaþtýrma seviyesi
-    public float zoomOutSize = 5f; // Normal kamera uzaklýðý
-    public float zoomSpeed = 2f; // Yakýnlaþma/Uzaklaþma hýzý
-    public float interactRange = 2.0f; // Etkileþim mesafesi
+    public Transform player;
+    public GameObject interactionText;
+    public GameObject fullScreenPanel;
+    public TextMeshProUGUI infoText;
+    public Camera mainCamera;
+    public float zoomInSize = 3f;
+    public float zoomOutSize = 5f;
+    public float interactRange = 2.0f;
+    public Button closeButton;
 
-    private bool canInteract = false; // Oyuncu etkileþim mesafesinde mi?
-    private bool isPanelOpen = false; // Panel açýk mý?
-    private Vector3 originalPosition; // Kameranýn orijinal konumu
-    private float originalSize; // Kameranýn orijinal zoom deðeri
+    private bool canInteract = false;
+    private bool isPanelOpen = false;
+    private Vector3 originalPosition;
+    private float originalSize;
 
     [TextArea(3, 10)]
-    public string infoMessage; // Bilgi metni
+    public string infoMessage;
+
+    private void OnEnable()
+    {
+        PlayerEvents.OnPlayerSpawned += HandlePlayerSpawned;
+    }
+
+    private void OnDisable()
+    {
+        PlayerEvents.OnPlayerSpawned -= HandlePlayerSpawned;
+    }
+
+    private void HandlePlayerSpawned(GameObject newPlayer)
+    {
+        player = newPlayer.transform;
+    }
 
     private void Start()
     {
         if (mainCamera == null)
-        {
-            mainCamera = Camera.main; // Eðer kamera atanmadýysa ana kamerayý al
-        }
+            mainCamera = Camera.main;
 
-        // Kameranýn orijinal pozisyonunu ve büyüklüðünü kaydet
         originalPosition = mainCamera.transform.position;
         originalSize = mainCamera.orthographicSize;
 
-        interactionText.SetActive(false); // Baþlangýçta "E Basýn" yazýsýný kapat
-        fullScreenPanel.SetActive(false); // Bilgi panelini baþlangýçta kapalý tut
+        interactionText.SetActive(false);
+        fullScreenPanel.SetActive(false);
+
+        if (closeButton != null)
+            closeButton.onClick.AddListener(CloseInfoPanel);
+
+        if (infoText != null && !string.IsNullOrEmpty(infoMessage))
+            infoText.text = infoMessage;
     }
 
     private void Update()
     {
-        if (isInRange(player, transform, interactRange))
+        if (player == null) return;
+
+        if (IsInRange(player, transform, interactRange))
         {
-            interactionText.SetActive(true);
+            interactionText.SetActive(!isPanelOpen);
             canInteract = true;
         }
         else
@@ -52,12 +71,10 @@ public class Interactable : MonoBehaviour
         }
 
         if (canInteract && Input.GetKeyDown(KeyCode.E))
-        {
             ToggleInfoPanel();
-        }
     }
 
-    private bool isInRange(Transform player, Transform target, float range)
+    private bool IsInRange(Transform player, Transform target, float range)
     {
         float distance = Vector2.Distance(player.position, target.position);
         return distance <= range;
@@ -65,45 +82,32 @@ public class Interactable : MonoBehaviour
 
     public void ToggleInfoPanel()
     {
-        isPanelOpen = !isPanelOpen; // Panelin açýk olup olmadýðýný tersine çevir
+        isPanelOpen = !isPanelOpen;
         fullScreenPanel.SetActive(isPanelOpen);
 
         if (isPanelOpen)
         {
-            infoMessage = infoText.text; // Bilgi metnini güncelle
-            StopAllCoroutines();
-            Vector3 zoomPosition = new Vector3(player.position.x, player.position.y, -10);
-            StartCoroutine(SmoothZoom(zoomPosition, zoomInSize));
+            interactionText.SetActive(false);
+            InstantZoom(new Vector3(player.position.x, player.position.y, -10), zoomInSize);
+            infoMessage = infoText.text;
         }
         else
         {
-            StopAllCoroutines();
-            StartCoroutine(SmoothZoom(originalPosition, originalSize));
+            CloseInfoPanel();
         }
     }
-    private IEnumerator SmoothZoom(Vector3 targetPosition, float targetSize)
+
+    public void CloseInfoPanel()
     {
-        float elapsedTime = 0f;
-        float duration = 1f / zoomSpeed; // Geçiþ süresi
+        isPanelOpen = false;
+        fullScreenPanel.SetActive(false);
+        interactionText.SetActive(true);
+        InstantZoom(originalPosition, originalSize);
+    }
 
-        Vector3 startPosition = mainCamera.transform.position;
-        float startSize = mainCamera.orthographicSize;
-
-        while (elapsedTime < duration)
-        {
-            elapsedTime += Time.deltaTime;
-            float t = elapsedTime / duration;
-
-            // Kamera konumunu ve büyüklüðünü yumuþakça deðiþtir
-            mainCamera.transform.position = Vector3.Lerp(startPosition, targetPosition, t);
-            mainCamera.orthographicSize = Mathf.Lerp(startSize, targetSize, t);
-
-            yield return null;
-        }
-
-        // Son deðerleri tam olarak uygula
+    private void InstantZoom(Vector3 targetPosition, float targetSize)
+    {
         mainCamera.transform.position = targetPosition;
         mainCamera.orthographicSize = targetSize;
     }
-
 }

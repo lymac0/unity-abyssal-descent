@@ -1,0 +1,2165 @@
+fileFormatVersion: 2
+guid: ee1483a7d09f4e644992e671a0435a19
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2013823793517257214
+    second: hell0__0
+  - first:
+      213: -2991033510282125978
+    second: hell0__1
+  - first:
+      213: 3201278078452104739
+    second: hell0__2
+  - first:
+      213: 8412795643711363621
+    second: hell0__3
+  - first:
+      213: 1302573116057740631
+    second: hell0__4
+  - first:
+      213: 2957598018176941007
+    second: hell0__5
+  - first:
+      213: 3851621108375973609
+    second: hell0__6
+  - first:
+      213: -4767422219003890181
+    second: hell0__7
+  - first:
+      213: -4918528024846134959
+    second: hell0__8
+  - first:
+      213: 10601683379965204
+    second: hell0__9
+  - first:
+      213: -5241802013662887999
+    second: hell0__10
+  - first:
+      213: -5593879645522854756
+    second: hell0__11
+  - first:
+      213: -7146394727744655669
+    second: hell0__12
+  - first:
+      213: -2212678185431742277
+    second: hell0__13
+  - first:
+      213: 7941236049365356705
+    second: hell0__14
+  - first:
+      213: -1750306359637206323
+    second: hell0__15
+  - first:
+      213: 2602778614899972933
+    second: hell0__16
+  - first:
+      213: 3583754002065574327
+    second: hell0__17
+  - first:
+      213: 2108742396190338183
+    second: hell0__18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hell0__0
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 575
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20e9c23fde57d04e0800000000000000
+      internalID: -2013823793517257214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__1
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 210
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66d185c9ed6bd76d0800000000000000
+      internalID: -2991033510282125978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__2
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 401
+        width: 207
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ef16583793d6c20800000000000000
+      internalID: 3201278078452104739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__3
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 346
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a9e57a01140c470800000000000000
+      internalID: 8412795643711363621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__4
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 222
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7556894095ba31210800000000000000
+      internalID: 1302573116057740631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__5
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 159
+        width: 65
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcbf5dd3abf7b0920800000000000000
+      internalID: 2957598018176941007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__6
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 102
+        width: 69
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ee6526cdf4b37530800000000000000
+      internalID: 3851621108375973609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__7
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 102
+        width: 69
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5f7fd20c6b6ddb0800000000000000
+      internalID: -4767422219003890181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__8
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 106
+        width: 56
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1511e3522d0edbbb0800000000000000
+      internalID: -4918528024846134959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__9
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 106
+        width: 57
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41d42e3cc2aa52000800000000000000
+      internalID: 10601683379965204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__10
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 159
+        width: 50
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf32b047d06147b0800000000000000
+      internalID: -5241802013662887999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__11
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 159
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c725c991c8e52b0800000000000000
+      internalID: -5593879645522854756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__12
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 91
+        width: 65
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bce2e0cbbd7e2dc90800000000000000
+      internalID: -7146394727744655669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__13
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 91
+        width: 67
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb8c513e9ecfa41e0800000000000000
+      internalID: -2212678185431742277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__14
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 34
+        width: 125
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a0d2f7cc10f43e60800000000000000
+      internalID: 7941236049365356705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__15
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 38
+        width: 137
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca97b1b3a9a5b7e0800000000000000
+      internalID: -1750306359637206323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__16
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 91
+        width: 65
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54b98123c5dee1420800000000000000
+      internalID: 2602778614899972933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__17
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 23
+        width: 65
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b9c08ff64d0cb130800000000000000
+      internalID: 3583754002065574327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__18
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 23
+        width: 128
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c2bb76902c34d10800000000000000
+      internalID: 2108742396190338183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__19
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 575
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908ca059468c9da419d3dad71c4b1145
+      internalID: -1741415139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__20
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 543
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27784660c4a765948959ccd2bb2a611d
+      internalID: -981505819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__21
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 543
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b509ca599a0c504fa094b4aacebd329
+      internalID: -913179762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__22
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 507
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b286e12b1891ff4dbea8da7ba7c7a7a
+      internalID: 273894584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__23
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 507
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 987e11c640bbe6c4cbf1724dbcd50999
+      internalID: -724338234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__24
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 507
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1231d1f3f68c5354990076c164094cee
+      internalID: -1037394399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__25
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 507
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c6c3ef9d0e0e643934ed99e979a0c9
+      internalID: -478799690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__26
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 507
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8fffa6dca5ec749a6773016ab13da5
+      internalID: 112677795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__27
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 507
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc341d06fb9b0384bba59fab1e297960
+      internalID: 295369069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__28
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 507
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1830caa35331b545aa126a380cd44dc
+      internalID: -124615680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__29
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 470
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 888718f1146a48545886781e598daf5a
+      internalID: -1340982843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__30
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 470
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6011c7b5b8e97d246b55e1eac35a66e4
+      internalID: 1479861367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__31
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 471
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a21ec059b69c643b3522c3f0d1f03a
+      internalID: 1943057634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__32
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 475
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7226ffe705eb094eaf92f71f7562110
+      internalID: -1146677503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__33
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 472
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9189fdfeafca2284998cf061e58b27c0
+      internalID: -1732710276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__34
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 470
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333a35b861f85784c9ddae951dfbf1da
+      internalID: 832554636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__35
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 470
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70e40e2545bf4c45a2edcd016e5eaa2
+      internalID: 66929179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__36
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 439
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a2bba6177a8e584198606d3852aa9d5
+      internalID: 899641371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__37
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 439
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3334883a395a7a40b3779a5756a53c2
+      internalID: -710721238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__38
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 439
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a2b83c476e19f46a24b81f28ac961f
+      internalID: 32065734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__39
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 404
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 414ffbe8005eae646848b6527a578392
+      internalID: 1300525485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__40
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 404
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f5e1b9639d0f447ab6c59fa19cd18e
+      internalID: -1687736706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__41
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 371
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37fb376307bcf149851e90472ed5867
+      internalID: -1837987930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__42
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 371
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6360fe32b698bf43bfc0852643d550b
+      internalID: -1400603961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__43
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 339
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd9bff341af78e4ba4b14258eb77e3f
+      internalID: 2094161994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__44
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 339
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8a7e4473654194aad59c6e252e407a
+      internalID: 136827682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__45
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 303
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36502138a4497d9468db2826b3cb3379
+      internalID: 1919868440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__46
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 303
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d419b23d18a38a45980516a65169c1b
+      internalID: 1881815709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__47
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 307
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a24570ec46af744aa056ece4186586
+      internalID: -2114020886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__48
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 307
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c647365bf5f9904dac404efc87725e7
+      internalID: -1004824941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__49
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 303
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b424a0dac5636474cbae69b000745fc6
+      internalID: -744371505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__50
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 303
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ad50d41d987f6468a6e369a09e97b0
+      internalID: -840465754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__51
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 303
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d842ceb4dd137d84cbe4433fc1328b59
+      internalID: -420031644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__52
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 267
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996d529cd6e88f447a2db738a914b7c6
+      internalID: -1276061191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__53
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 271
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa46cda0a47cf0c40ba3dc47ad8cb901
+      internalID: -1366751294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__54
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 198
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8fa2a1ebb40f143a242a30c3de5448
+      internalID: -321399598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__55
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 198
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8c7c5a83b9f8f489d5314d96b5539e
+      internalID: -76660925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__56
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 363
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd25483286f9bb147bd60a9ce09267bf
+      internalID: -844568922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__57
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 261
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84cc2256444e254d8d262f02c60ef43
+      internalID: -919746790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__58
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 303
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1869d508299fcab4597fed7f6b71294a
+      internalID: -1794606856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__59
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 440
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8c500d9d09040429eca4a83991b2a3
+      internalID: -1069746393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__60
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 574
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ed8e1fc1045604bb13154f9d30a248
+      internalID: -1239052543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__61
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 574
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af984b6be103824681e30bf4d70a732
+      internalID: -345553184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__62
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 574
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831ca502f9cb06743b4e3b19168319c7
+      internalID: 750689769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__63
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 574
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ad9f6d396da934297a7c53d2b257d1
+      internalID: 1892752092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__64
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 542
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ffb7df2e741004b94db106c43d4a46
+      internalID: -1331949850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__65
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 542
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ab94962adfd0b4eaf5e29c129f5428
+      internalID: -1942351769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__66
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 542
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6de1f85c87af547b8b6ca06b551832
+      internalID: 2065495298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__67
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 543
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f8490101adcc84ca9dde39261baf2d
+      internalID: -793606061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__68
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 574
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f7faa8e8152d74b91e59bca26fcd9b
+      internalID: 117201566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__69
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 575
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69cd7c16f3ee1ac41a93dd65ae026338
+      internalID: 1881234550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__70
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 574
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6aa89b04902774f8e98d2ce851f26a
+      internalID: 1948229774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__71
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 510
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4c65fdbf08bdc47bd50b0d5358fa1e
+      internalID: 1586144988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__72
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 478
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb382402cf0fce949bb8b0a31543815c
+      internalID: -321056258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__73
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 439
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a46dbf5179cbba43b02c9eccd6a7ccb
+      internalID: -1322523908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__74
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 439
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1799487ea65e044851bf6086f0d9a5
+      internalID: 1126766367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__75
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 439
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543eb5eed5dfdb44783c6df06fcafc51
+      internalID: 1354170457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__76
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 408
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378a437a013257a4e8ccddcc07742831
+      internalID: 322968929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__77
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 408
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896c4977699178640b906014bb5253e2
+      internalID: -2016600299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__78
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 438
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61269a30396f214ea3e5ef10a692cac
+      internalID: -1798106001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__79
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 413
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc23350624d62148b5cc5a57e32b592
+      internalID: 45176617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__80
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 476
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e907594b0e13b5419961ffca95b4e2a
+      internalID: -1065099292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__81
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 346
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d153698e67da624488e4251f79faad0c
+      internalID: -2127563560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__82
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 346
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18382cacd682aba498342d928153f90d
+      internalID: 1055206349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__83
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 346
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef084d03d87ee6349afff614881b429d
+      internalID: 70865158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__84
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 222
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351ce47151267ac4297c495a943fbe4e
+      internalID: -1755596095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell0__85
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 405
+        width: 201
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb052656d2655134391ceadf1e1ea114
+      internalID: 462618736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 457748216182eea4dbb127a3709f0c8e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      hell0__0: -2013823793517257214
+      hell0__1: -2991033510282125978
+      hell0__10: -5241802013662887999
+      hell0__11: -5593879645522854756
+      hell0__12: -7146394727744655669
+      hell0__13: -2212678185431742277
+      hell0__14: 7941236049365356705
+      hell0__15: -1750306359637206323
+      hell0__16: 2602778614899972933
+      hell0__17: 3583754002065574327
+      hell0__18: 2108742396190338183
+      hell0__19: -1741415139
+      hell0__2: 3201278078452104739
+      hell0__20: -981505819
+      hell0__21: -913179762
+      hell0__22: 273894584
+      hell0__23: -724338234
+      hell0__24: -1037394399
+      hell0__25: -478799690
+      hell0__26: 112677795
+      hell0__27: 295369069
+      hell0__28: -124615680
+      hell0__29: -1340982843
+      hell0__3: 8412795643711363621
+      hell0__30: 1479861367
+      hell0__31: 1943057634
+      hell0__32: -1146677503
+      hell0__33: -1732710276
+      hell0__34: 832554636
+      hell0__35: 66929179
+      hell0__36: 899641371
+      hell0__37: -710721238
+      hell0__38: 32065734
+      hell0__39: 1300525485
+      hell0__4: 1302573116057740631
+      hell0__40: -1687736706
+      hell0__41: -1837987930
+      hell0__42: -1400603961
+      hell0__43: 2094161994
+      hell0__44: 136827682
+      hell0__45: 1919868440
+      hell0__46: 1881815709
+      hell0__47: -2114020886
+      hell0__48: -1004824941
+      hell0__49: -744371505
+      hell0__5: 2957598018176941007
+      hell0__50: -840465754
+      hell0__51: -420031644
+      hell0__52: -1276061191
+      hell0__53: -1366751294
+      hell0__54: -321399598
+      hell0__55: -76660925
+      hell0__56: -844568922
+      hell0__57: -919746790
+      hell0__58: -1794606856
+      hell0__59: -1069746393
+      hell0__6: 3851621108375973609
+      hell0__60: -1239052543
+      hell0__61: -345553184
+      hell0__62: 750689769
+      hell0__63: 1892752092
+      hell0__64: -1331949850
+      hell0__65: -1942351769
+      hell0__66: 2065495298
+      hell0__67: -793606061
+      hell0__68: 117201566
+      hell0__69: 1881234550
+      hell0__7: -4767422219003890181
+      hell0__70: 1948229774
+      hell0__71: 1586144988
+      hell0__72: -321056258
+      hell0__73: -1322523908
+      hell0__74: 1126766367
+      hell0__75: 1354170457
+      hell0__76: 322968929
+      hell0__77: -2016600299
+      hell0__78: -1798106001
+      hell0__79: 45176617
+      hell0__8: -4918528024846134959
+      hell0__80: -1065099292
+      hell0__81: -2127563560
+      hell0__82: 1055206349
+      hell0__83: 70865158
+      hell0__84: -1755596095
+      hell0__85: 462618736
+      hell0__9: 10601683379965204
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -140,4 +140,20 @@ public class Obeliks : MonoBehaviour
         mainCamera.transform.position = targetPosition;
         mainCamera.orthographicSize = targetSize;
     }
+    // Diðer using'ler yukarýda
+    private void OnEnable()
+    {
+        PlayerEvents.OnPlayerSpawned += HandlePlayerSpawned;
+    }
+
+    private void OnDisable()
+    {
+        PlayerEvents.OnPlayerSpawned -= HandlePlayerSpawned;
+    }
+
+    private void HandlePlayerSpawned(GameObject newPlayer)
+    {
+        player = newPlayer.transform;
+    }
+
 }
