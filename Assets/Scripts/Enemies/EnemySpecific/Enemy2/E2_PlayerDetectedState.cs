@@ -1,12 +1,16 @@
 using UnityEngine;
 
-public class E1_PlayerDetectedState : PlayerDetectedState
+public class E2_PlayerDetectedState : PlayerDetectedState
 {
-    private Enemy1 enemy;
-
-    public E1_PlayerDetectedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetected stateData, Enemy1 enemy) : base(entity, stateMachine, animBoolName, stateData)
+    private Enemy2 enemy;
+    public E2_PlayerDetectedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetected stateData, Enemy2 enemy) : base(entity, stateMachine, animBoolName, stateData)
     {
         this.enemy = enemy;
+    }
+
+    public override void DoChecks()
+    {
+        base.DoChecks();
     }
 
     public override void Enter()
@@ -22,7 +26,8 @@ public class E1_PlayerDetectedState : PlayerDetectedState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        if(performCloseRangeAction)
+
+        if (performCloseRangeAction)
         {
             stateMachine.ChangeState(enemy.meleeAttackState);
         }
@@ -30,11 +35,11 @@ public class E1_PlayerDetectedState : PlayerDetectedState
         {
             stateMachine.ChangeState(enemy.chargeState);
         }
-        else if(!isPlayerInMaxAgroRange)
+        else if (!isPlayerInMaxAgroRange)
         {
             stateMachine.ChangeState(enemy.lookForPlayerState);
         }
-        else if(!isDetectingLedge)
+        else if (!isDetectingLedge)
         {
             entity.Flip();
             stateMachine.ChangeState(enemy.moveState);
