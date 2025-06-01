@@ -16,6 +16,11 @@ public class E1_DeadState : DeadState
     public override void Enter()
     {
         base.Enter();
+
+        GameObject.Instantiate(stateData.deathBloodParticle, entity.aliveGO.transform.position, stateData.deathBloodParticle.transform.rotation);
+        GameObject.Instantiate(stateData.deathChunkParticle, entity.aliveGO.transform.position, stateData.deathChunkParticle.transform.rotation);
+
+        entity.gameObject.SetActive(false);
     }
 
     public override void Exit()
