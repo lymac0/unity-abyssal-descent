@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -46,4 +46,15 @@ public class PlayerStats : MonoBehaviour
         GM.Respawn();
         Destroy(gameObject);
     }
+    public void Heal(float amount)
+    {
+        currentHealth += amount;
+
+        if (currentHealth > maxHealth)
+            currentHealth = maxHealth;
+
+        healthBar.SetHealth(currentHealth);
+        Debug.Log("❤️ Sağlık iyileştirildi: +" + amount + " → Güncel sağlık: " + currentHealth);
+    }
+
 }

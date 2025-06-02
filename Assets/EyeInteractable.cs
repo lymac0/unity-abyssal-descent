@@ -17,7 +17,6 @@ public class EyeInteractable : MonoBehaviour
 
     private void Start()
     {
-        // 🧠 PLAYER BUL
         if (player == null)
         {
             GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -25,31 +24,22 @@ public class EyeInteractable : MonoBehaviour
                 player = playerObj.transform;
         }
 
-        // 🧠 CANVAS UI ELEMANLARINI BUL
-        if (interactionText == null)
-            interactionText = GameObject.Find("InteractionText4"); // isme göre bul
+        // UIManager'dan çek
+        interactionText = UIManager.Instance.interactionText4;
+        fullScreenPanel = UIManager.Instance.fullScreenPanel4;
+        infoText = UIManager.Instance.infoText4;
+        closeButton = UIManager.Instance.closeButton4;
 
-        if (fullScreenPanel == null)
-            fullScreenPanel = GameObject.Find("FullScreenPanel4");
-
-        if (infoText == null)
-            infoText = GameObject.Find("infoText4")?.GetComponent<TextMeshProUGUI>();
-
-        if (closeButton == null)
-            closeButton = GameObject.Find("CloseButton4")?.GetComponent<Button>();
-
-        // 🧠 BUTON KAPATMA EVENT
         if (closeButton != null)
             closeButton.onClick.AddListener(ClosePanel);
 
-        // Başlangıçta gizle
         interactionText?.SetActive(false);
         fullScreenPanel?.SetActive(false);
 
-        // Metni göster
         if (infoText != null && !string.IsNullOrEmpty(infoMessage))
             infoText.text = infoMessage;
     }
+
 
 
     private void Update()
@@ -81,7 +71,7 @@ public class EyeInteractable : MonoBehaviour
         fullScreenPanel?.SetActive(true);
 
         if (infoText != null)
-            infoText.text = infoMessage;
+            infoMessage = infoText.text;
     }
 
     void ClosePanel()

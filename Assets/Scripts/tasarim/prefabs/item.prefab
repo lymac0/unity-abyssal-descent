@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -6147607638299694279}
   - component: {fileID: 3457646921314597870}
   - component: {fileID: -5531604098354236617}
+  - component: {fileID: 6319528476406435035}
   m_Layer: 5
   m_Name: item
   m_TagString: item
@@ -118,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 1
+  healAmount: 15
 --- !u!114 &-6147607638299694279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,3 +224,15 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.08
+--- !u!114 &6319528476406435035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2304446859345187010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530b074930aa4f64697e34cd0dc270ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

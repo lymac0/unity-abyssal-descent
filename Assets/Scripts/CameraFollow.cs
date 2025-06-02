@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
@@ -6,7 +6,18 @@ public class CameraFollow : MonoBehaviour
     public Transform target;
     public float yOffset = 2f;
 
-    // Update is called once per frame
+    void Start()
+    {
+        if (target == null)
+        {
+            GameObject playerObj = GameObject.FindWithTag("Player");
+            if (playerObj != null)
+                target = playerObj.transform;
+            else
+                Debug.LogWarning("🚫 Kamera: Player bulunamadı!");
+        }
+    }
+
     void FixedUpdate()
     {
         if (target != null)
