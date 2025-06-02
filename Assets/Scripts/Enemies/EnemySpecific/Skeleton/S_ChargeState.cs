@@ -29,7 +29,7 @@ public class S_ChargeState : ChargeState
 
         if (performCloseRangeAction)
         {
-            //stateMachine.ChangeState(enemy.meleeAttackState);
+            stateMachine.ChangeState(enemy.meleeAttackState);
         }
         else if (!isDetectingLedge || isDetectingWall)
         {

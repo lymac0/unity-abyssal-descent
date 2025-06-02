@@ -1,0 +1,12 @@
+using UnityEngine;
+
+public class G_MoveState : MoveState
+{
+    private Goblin enemy;
+    public G_MoveState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_MoveState stateData, Goblin enemy) : base(entity, stateMachine, animBoolName, stateData)
+    {
+        this.enemy = enemy;
+    }
+
+    
+}

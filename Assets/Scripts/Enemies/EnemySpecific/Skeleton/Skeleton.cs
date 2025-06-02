@@ -8,6 +8,8 @@ public class Skeleton : Entity
     public S_PlayerDetectedState playerDetectedState { get; private set; }
     public S_ChargeState chargeState { get; private set; }
     public S_LookForPlayerState lookForPlayerState { get; private set; }
+    public S_MeleeAttackState meleeAttackState { get; private set; }
+    public S_StunState stunState { get; private set; }
 
     [SerializeField]
     private D_IdleState idleStateData;
@@ -21,9 +23,13 @@ public class Skeleton : Entity
     private D_ChargeState chargeStateData;
     [SerializeField]
     private D_LookForPlayer lookForPlayerData;
+    [SerializeField]
+    private D_MeleeAttack meleeAttackStateData;
+    [SerializeField]
+    private D_StunState stunStateData;
 
-    //[SerializeField]
-    //private Transform meleeAttackPosition;
+    [SerializeField]
+    private Transform meleeAttackPosition;
 
     public override void Start()
     {
@@ -35,6 +41,8 @@ public class Skeleton : Entity
         playerDetectedState = new S_PlayerDetectedState(this, stateMachine, "playerDetected", playerDetectedData, this);
         chargeState = new S_ChargeState(this, stateMachine, "charge", chargeStateData, this);
         lookForPlayerState = new S_LookForPlayerState(this, stateMachine,"lookForPlayer", lookForPlayerData, this);
+        meleeAttackState = new S_MeleeAttackState(this, stateMachine, "meleeAttack", meleeAttackPosition,meleeAttackStateData, this);
+        stunState = new S_StunState(this, stateMachine, "stun", stunStateData, this);
 
         stateMachine.Initialize(moveState);
     }
@@ -47,12 +55,16 @@ public class Skeleton : Entity
         {
             stateMachine.ChangeState(deadState);
         }
+        else if (isStunned && stateMachine.currentState != stunState)
+        {
+            stateMachine.ChangeState(stunState);
+        }
     }
 
     public override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
 
-        //Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackStateData.attackRadius);
+        Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackStateData.attackRadius);
     }
 }

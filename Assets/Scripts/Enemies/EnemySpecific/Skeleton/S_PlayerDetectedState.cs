@@ -29,7 +29,7 @@ public class S_PlayerDetectedState : PlayerDetectedState
 
         if (performCloseRangeAction)
         {
-            //stateMachine.ChangeState(enemy.meleeAttackState);
+            stateMachine.ChangeState(enemy.meleeAttackState);
         }
         else if (performLongRangeAction)
         {

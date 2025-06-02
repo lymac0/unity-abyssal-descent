@@ -42,8 +42,6 @@ public class E2_MeleeAttackState : MeleeAttackState
             {
                 stateMachine.ChangeState(enemy.lookForPlayerState);
             }
-
-            //TODO: lookforplayerState
         }
     }
 
