@@ -5,7 +5,7 @@ using System.Collections;
 
 public class PortalToLevel3 : MonoBehaviour
 {
-    public Image fadeImage; // Inspector’dan atanmazsa, sahnede ismiyle bulacaðýz
+    public Image fadeImage; // Fade geçiþi için UI Image
     public Animator portalAnimator;
     public string targetSceneName;
     public string spawnPointTag = "SpawnPoint";
@@ -36,21 +36,17 @@ public class PortalToLevel3 : MonoBehaviour
                 player = playerObj;
         }
 
-        // Eðer fadeImage atanmadýysa, sahnede ismiyle bulmaya çalýþ
         if (fadeImage == null)
         {
             GameObject fadeObj = GameObject.Find("FadeImage");
             if (fadeObj != null)
             {
                 fadeImage = fadeObj.GetComponent<Image>();
-                if (fadeImage != null)
-                {
-                    DontDestroyOnLoad(fadeImage.transform.root.gameObject); // root canvas’ý koru
-                }
+                DontDestroyOnLoad(fadeImage.transform.root.gameObject);
             }
             else
             {
-                Debug.LogWarning("FadeImage ismiyle bir UI nesnesi bulunamadý!");
+                Debug.LogWarning("FadeImage bulunamadý!");
             }
         }
     }
@@ -76,6 +72,50 @@ public class PortalToLevel3 : MonoBehaviour
             yield return StartCoroutine(FadeToBlack());
         }
 
+        // Seçim paneli gösteriliyor
+        UIManager.Instance.ShowChoicePanel();
+        UIManager.Instance.returnButton.onClick.RemoveAllListeners();
+        UIManager.Instance.continueButton.onClick.RemoveAllListeners();
+        UIManager.Instance.returnButton.onClick.AddListener(EndGame);
+        UIManager.Instance.continueButton.onClick.AddListener(GoToNextLevel);
+    }
+
+    private IEnumerator FadeToBlack()
+    {
+        float duration = 1f;
+        float elapsed = 0f;
+        Color color = fadeImage.color;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            color.a = Mathf.Clamp01(elapsed / duration);
+            fadeImage.color = color;
+            yield return null;
+        }
+    }
+
+    private void EndGame()
+    {
+        UIManager.Instance.resultText.text = "Ethan’ý kurtarmamayý seçtiniz.";
+        UIManager.Instance.returnButton.interactable = false;
+        UIManager.Instance.continueButton.interactable = false;
+        StartCoroutine(QuitAfterDelay());
+    }
+
+    private IEnumerator QuitAfterDelay()
+    {
+        yield return new WaitForSeconds(3f);
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
+
+    private void GoToNextLevel()
+    {
+        UIManager.Instance.HideChoicePanel();
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene(targetSceneName);
     }
@@ -105,20 +145,5 @@ public class PortalToLevel3 : MonoBehaviour
         }
 
         SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    private IEnumerator FadeToBlack()
-    {
-        float duration = 1f;
-        float elapsed = 0f;
-        Color color = fadeImage.color;
-
-        while (elapsed < duration)
-        {
-            elapsed += Time.deltaTime;
-            color.a = Mathf.Clamp01(elapsed / duration);
-            fadeImage.color = color;
-            yield return null;
-        }
     }
 }

@@ -15,9 +15,16 @@ MonoBehaviour:
   npcName: old guardian
   npcPortrait: {fileID: 1972608378, guid: 60c3661c152b98445a513b157920b485, type: 3}
   dialogueLines:
-  - "Merhaba, gen\xE7 adam."
-  - "Kaybolmu\u015F g\xF6r\xFCn\xFCyorsun."
-  autoProgressLines: 0100
+  - "Sen... uzun zaman sonra buraya d\xFC\u015Fen ilk diri ruhsun."
+  - "Bu d\xFCnya yaln\u0131zca hatalarla y\xFCzle\u015Fenlere de\u011Fil, se\xE7imlerine
+    katlanabilenlere de ceza keser."
+  - "Her katman, ge\xE7mi\u015Fin bir yans\u0131mas\u0131d\u0131r. Lordlar, senin
+    kim oldu\u011Funu \xF6\u011Frenmeye can atar. "
+  - "Ethan m\u0131 dedin? O burada g\xF6r\xFCld\xFC evet... Ama art\u0131k ayn\u0131
+    ki\u015Fi olmayabilir."
+  - "E\u011Fer onu arayacaksan... unutmamal\u0131s\u0131n: baz\u0131 ger\xE7ekler,
+    kurtar\u0131lmaya de\u011Fmez olabilir."
+  autoProgressLines: 0100000000
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound: {fileID: 0}

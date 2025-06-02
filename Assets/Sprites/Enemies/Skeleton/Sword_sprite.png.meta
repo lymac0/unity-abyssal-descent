@@ -64,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -78,7 +78,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,7 +102,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,6 +123,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -130,10 +143,10 @@ TextureImporter:
       name: Sword_sprite_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 92
-        height: 102
+        x: 39
+        y: 35
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +165,10 @@ TextureImporter:
       name: Sword_sprite_1
       rect:
         serializedVersion: 2
-        x: 92
-        y: 0
-        width: 92
-        height: 102
+        x: 130
+        y: 35
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,10 +187,10 @@ TextureImporter:
       name: Sword_sprite_2
       rect:
         serializedVersion: 2
-        x: 184
-        y: 0
-        width: 92
-        height: 102
+        x: 221
+        y: 36
+        width: 26
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,10 +209,10 @@ TextureImporter:
       name: Sword_sprite_3
       rect:
         serializedVersion: 2
-        x: 276
-        y: 0
-        width: 92
-        height: 102
+        x: 317
+        y: 40
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,10 +231,10 @@ TextureImporter:
       name: Sword_sprite_4
       rect:
         serializedVersion: 2
-        x: 368
-        y: 0
-        width: 92
-        height: 102
+        x: 403
+        y: 39
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,10 +253,10 @@ TextureImporter:
       name: Sword_sprite_5
       rect:
         serializedVersion: 2
-        x: 460
-        y: 0
-        width: 92
-        height: 102
+        x: 492
+        y: 36
+        width: 23
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,10 +275,10 @@ TextureImporter:
       name: Sword_sprite_6
       rect:
         serializedVersion: 2
-        x: 552
-        y: 0
-        width: 92
-        height: 102
+        x: 513
+        y: 40
+        width: 12
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,10 +297,10 @@ TextureImporter:
       name: Sword_sprite_7
       rect:
         serializedVersion: 2
-        x: 644
-        y: 0
-        width: 92
-        height: 102
+        x: 579
+        y: 41
+        width: 12
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,11 +315,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sword_sprite_8
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 34
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f72b0f6df32f0abd0800000000000000
+      internalID: -2620828627126668673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword_sprite_9
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 30
+        width: 128
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66531f7cd22ca1b50800000000000000
+      internalID: 6564772908729709926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f094562b53e77bf4d95c08127d208aa0
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -324,6 +381,8 @@ TextureImporter:
       Sword_sprite_5: 4746021998800790146
       Sword_sprite_6: -3783934116318617611
       Sword_sprite_7: 3786947659864256450
+      Sword_sprite_8: -2620828627126668673
+      Sword_sprite_9: 6564772908729709926
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
