@@ -22,10 +22,10 @@ MonoBehaviour:
   stunResistance: 3
   stunRecoveryTime: 2
   closeRangeActionDistance: 1
-  hitParticle: {fileID: 0}
+  hitParticle: {fileID: 7117598680055943340, guid: ef8e6ebaa6689964fa8523dede693512, type: 3}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64

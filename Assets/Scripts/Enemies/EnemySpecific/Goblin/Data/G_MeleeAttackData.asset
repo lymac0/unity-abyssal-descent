@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6331bdfd5f800244a2959fcd6e44c91, type: 3}
   m_Name: G_MeleeAttackData
   m_EditorClassIdentifier: 
-  attackRadius: 0.5
+  attackRadius: 1.46
   attackDamage: 10
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
