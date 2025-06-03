@@ -19,11 +19,7 @@ public class NPC : MonoBehaviour, IPlayerDependent
     private Transform player;
 
 
-    void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-
+  
     public void SetPlayer(Transform playerTransform)
     {
         this.player = playerTransform;

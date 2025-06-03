@@ -22,10 +22,7 @@ public class Interactable : MonoBehaviour, IPlayerDependent
     [TextArea(3, 10)]
     public string infoMessage;
 
-    void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
+    
 
     public void SetPlayer(Transform playerTransform)
     {
