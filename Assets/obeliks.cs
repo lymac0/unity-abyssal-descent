@@ -28,12 +28,6 @@ public class Obeliks : MonoBehaviour, IPlayerDependent
     public string infoMessage; // Bilgi metni
 
 
-    void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-
-
     public void SetPlayer(Transform playerTransform)
     {
         this.player = playerTransform;
