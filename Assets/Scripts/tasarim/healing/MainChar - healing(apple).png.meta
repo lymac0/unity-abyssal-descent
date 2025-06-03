@@ -522,7 +522,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - healing(apple)_0: -3452174859951311940
+      MainChar - healing(apple)_1: -6016281520522976294
+      MainChar - healing(apple)_10: -8175157426275872460
+      MainChar - healing(apple)_11: 3837395356622911140
+      MainChar - healing(apple)_12: 7643052622329403026
+      MainChar - healing(apple)_13: 4744032098711059946
+      MainChar - healing(apple)_14: -1411867896712965031
+      MainChar - healing(apple)_15: 197530885157681227
+      MainChar - healing(apple)_2: 5930019355592444207
+      MainChar - healing(apple)_3: -7559127500866742279
+      MainChar - healing(apple)_4: 6244926638089228366
+      MainChar - healing(apple)_5: 2795028488301263770
+      MainChar - healing(apple)_6: 7977015941480734964
+      MainChar - healing(apple)_7: -1687684249337098327
+      MainChar - healing(apple)_8: 6199714905403509162
+      MainChar - healing(apple)_9: -6928202838365393764
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

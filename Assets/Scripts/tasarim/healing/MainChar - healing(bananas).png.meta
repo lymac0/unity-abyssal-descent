@@ -522,7 +522,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - healing(bananas)_0: -3706676224907599358
+      MainChar - healing(bananas)_1: -6665426136003210876
+      MainChar - healing(bananas)_10: 7949497878355597943
+      MainChar - healing(bananas)_11: -4025041695671647385
+      MainChar - healing(bananas)_12: -1099457868850005965
+      MainChar - healing(bananas)_13: 3188067547821094910
+      MainChar - healing(bananas)_14: -4794627543111109496
+      MainChar - healing(bananas)_15: -553718662120864664
+      MainChar - healing(bananas)_2: 8335699128062902753
+      MainChar - healing(bananas)_3: 9081372892771225483
+      MainChar - healing(bananas)_4: -3758537410564231792
+      MainChar - healing(bananas)_5: -706677237258294874
+      MainChar - healing(bananas)_6: 1465491151553790037
+      MainChar - healing(bananas)_7: -7025202154991781956
+      MainChar - healing(bananas)_8: 1903194077444127514
+      MainChar - healing(bananas)_9: 7083616501261376685
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

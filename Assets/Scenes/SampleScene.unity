@@ -1126,6 +1126,15 @@ MonoBehaviour:
   ledgeCheck: {fileID: 1663623276}
   playerCheck: {fileID: 529530282}
   groundCheck: {fileID: 717744538}
+  idleStateData: {fileID: 11400000, guid: f962a616e522ff24fbe214c152467b16, type: 2}
+  moveStateData: {fileID: 11400000, guid: 708d769495e20b0469644a0534e4d709, type: 2}
+  deadStateData: {fileID: 11400000, guid: 100e06f3c92cca04aba53a00ae720f94, type: 2}
+  playerDetectedData: {fileID: 11400000, guid: 674c53c6a6c198d46a45ece7fdb617c5, type: 2}
+  chargeStateData: {fileID: 11400000, guid: fec9d737a3509f24099694798838714a, type: 2}
+  lookForPlayerData: {fileID: 11400000, guid: 78156f0ef85b81045a33499189b6ff1c, type: 2}
+  meleeAttackStateData: {fileID: 11400000, guid: ccfa213d1241908408eb01e70c1da3dd, type: 2}
+  stunStateData: {fileID: 11400000, guid: a80e568da49c52740bdb7611f1be42b8, type: 2}
+  meleeAttackPosition: {fileID: 710637490}
 --- !u!1 &163823723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2564,6 +2573,7 @@ Transform:
   - {fileID: 1663623276}
   - {fileID: 529530282}
   - {fileID: 717744538}
+  - {fileID: 710637490}
   m_Father: {fileID: 144389748}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &296274219
@@ -5642,6 +5652,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &710637489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 710637490}
+  m_Layer: 9
+  m_Name: MeleeAttackPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &710637490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710637489}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 296274218}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &717744537
 GameObject:
   m_ObjectHideFlags: 0

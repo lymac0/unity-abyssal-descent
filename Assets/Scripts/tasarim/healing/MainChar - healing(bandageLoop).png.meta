@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - healing(bandageLoop)_0: 4609160390839732529
+      MainChar - healing(bandageLoop)_1: 9162547744060547020
+      MainChar - healing(bandageLoop)_2: 8283136516837752857
+      MainChar - healing(bandageLoop)_3: -7634451017265604580
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

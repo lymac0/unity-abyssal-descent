@@ -697,7 +697,30 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - healing(goldenapple)_0: 6568071967449722585
+      MainChar - healing(goldenapple)_1: -1400124590144704842
+      MainChar - healing(goldenapple)_10: 5968415099669464879
+      MainChar - healing(goldenapple)_11: 1338779841394130380
+      MainChar - healing(goldenapple)_12: 1888909311104116625
+      MainChar - healing(goldenapple)_13: -7801698610955179922
+      MainChar - healing(goldenapple)_14: -6675613260904554705
+      MainChar - healing(goldenapple)_15: 7793250829045422224
+      MainChar - healing(goldenapple)_16: -8879195096753446606
+      MainChar - healing(goldenapple)_17: 2165157220621816057
+      MainChar - healing(goldenapple)_18: 2969895314909000726
+      MainChar - healing(goldenapple)_19: 4374611133280362725
+      MainChar - healing(goldenapple)_2: -9056724057702793625
+      MainChar - healing(goldenapple)_20: 1851231500742847311
+      MainChar - healing(goldenapple)_21: -3913294828969642660
+      MainChar - healing(goldenapple)_22: 1353734952156400628
+      MainChar - healing(goldenapple)_3: 7032540319193459325
+      MainChar - healing(goldenapple)_4: 375254223534808878
+      MainChar - healing(goldenapple)_5: 6247582069338404938
+      MainChar - healing(goldenapple)_6: 118035415886328180
+      MainChar - healing(goldenapple)_7: -5151864340461345411
+      MainChar - healing(goldenapple)_8: -8517337561916186634
+      MainChar - healing(goldenapple)_9: -3489143440798691759
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
