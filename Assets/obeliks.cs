@@ -1,24 +1,24 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 using static System.Net.Mime.MediaTypeNames;
 
-public class Obeliks : MonoBehaviour
+public class Obeliks : MonoBehaviour, IPlayerDependent
 {
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private bool canInteract = false;
     private bool isPanelOpen = false;
 
-    public GameObject interactionText; // "E Basın" yazısı
-    public GameObject fullScreenPanel; // Bilgi ekranı
+    public GameObject interactionText; // "E BasÄ±n" yazÄ±sÄ±
+    public GameObject fullScreenPanel; // Bilgi ekranÄ±
     public TextMeshProUGUI infoText; // Bilgilendirici metin
     public Camera mainCamera; // Ana Kamera
-    public float zoomInSize = 3f; // Yakınlaştırma seviyesi
-    public float zoomOutSize = 5f; // Normal kamera uzaklığı
-    public float zoomSpeed = 2f; // Yakınlaşma/Uzaklaşma hızı
-    public float interactRange = 2.0f; // Etkileşim mesafesi
+    public float zoomInSize = 3f; // YakÄ±nlaÅŸtÄ±rma seviyesi
+    public float zoomOutSize = 5f; // Normal kamera uzaklÄ±ÄŸÄ±
+    public float zoomSpeed = 2f; // YakÄ±nlaÅŸma/UzaklaÅŸma hÄ±zÄ±
+    public float interactRange = 2.0f; // EtkileÅŸim mesafesi
     public Transform player; // Oyuncu karakteri
 
     private Vector3 originalPosition;
@@ -27,6 +27,35 @@ public class Obeliks : MonoBehaviour
     [TextArea(3, 10)]
     public string infoMessage; // Bilgi metni
 
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+
+    public void SetPlayer(Transform playerTransform)
+    {
+        this.player = playerTransform;
+        Debug.Log("Obeliks player referansÄ± atandÄ±.");
+    }
+
+    private void OnEnable()
+    {
+        PlayerEvents.OnPlayerSpawned += SetPlayer;
+    }
+
+    private void OnDisable()
+    {
+        PlayerEvents.OnPlayerSpawned -= SetPlayer;
+    }
+
+    private void SetPlayer(GameObject playerObj)
+    {
+        player = playerObj.transform;
+        Debug.Log("ğŸ”— Obeliks player'Ä± aldÄ±: " + player.name);
+    }
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -34,20 +63,39 @@ public class Obeliks : MonoBehaviour
 
         if (mainCamera == null)
         {
-            mainCamera = Camera.main; // Eğer kamera atanmadıysa ana kamerayı al
+            mainCamera = Camera.main; // EÄŸer kamera atanmadÄ±ysa ana kamerayÄ± al
         }
 
-        // Kameranın orijinal pozisyonunu ve büyüklüğünü kaydet
+        // KameranÄ±n orijinal pozisyonunu ve bÃ¼yÃ¼klÃ¼ÄŸÃ¼nÃ¼ kaydet
         originalPosition = mainCamera.transform.position;
         originalSize = mainCamera.orthographicSize;
 
         spriteRenderer.enabled = false;
-        interactionText.SetActive(false); // Başlangıçta "E" tuşu simgesi kapalı
-        fullScreenPanel.SetActive(false); // Bilgi paneli başlangıçta kapalı
+        interactionText.SetActive(false); // BaÅŸlangÄ±Ã§ta "E" tuÅŸu simgesi kapalÄ±
+        fullScreenPanel.SetActive(false); // Bilgi paneli baÅŸlangÄ±Ã§ta kapalÄ±
     }
 
     private void Update()
     {
+        if (player == null || player.Equals(null))
+        {
+            GameObject found = GameObject.FindGameObjectWithTag("Player");
+            if (found != null)
+                player = found.transform;
+            return;
+        }
+        // â— interactionText'e gÃ¼venli eriÅŸim
+        if (interactionText != null && !interactionText.Equals(null))
+        {
+            float distance = Vector2.Distance(player.position, transform.position);
+            interactionText.SetActive(distance < 2f);
+        }
+
+        // âœ… Player varsa normal davranÄ±ÅŸa devam et
+        if (isInRange(player, transform, 2f))
+        {
+            // etkileÅŸim, yazÄ± gÃ¶sterme, vs.
+        }
         if (isInRange(player, transform, interactRange))
         {
             interactionText.SetActive(true);
@@ -73,24 +121,24 @@ public class Obeliks : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) // Oyuncu yaklaşınca
+        if (other.CompareTag("Player")) // Oyuncu yaklaÅŸÄ±nca
         {
-            spriteRenderer.enabled = true; // Görünür yap
-            animator.Play("obeliks_effects"); // Efekt animasyonunu başlat
+            spriteRenderer.enabled = true; // GÃ¶rÃ¼nÃ¼r yap
+            animator.Play("obeliks_effects"); // Efekt animasyonunu baÅŸlat
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) // Oyuncu uzaklaşınca
+        if (other.CompareTag("Player")) // Oyuncu uzaklaÅŸÄ±nca
         {
-            animator.Play("obeliks"); // Efekt bittiğinde idle animasyonuna geç
-            interactionText.SetActive(false); // Oyuncu uzaklaşınca "E" simgesini kaldır
+            animator.Play("obeliks"); // Efekt bittiÄŸinde idle animasyonuna geÃ§
+            interactionText.SetActive(false); // Oyuncu uzaklaÅŸÄ±nca "E" simgesini kaldÄ±r
             canInteract = false;
         }
     }
 
-    // Idle animasyonu bittiğinde "E" simgesi gözüksün
+    // Idle animasyonu bittiÄŸinde "E" simgesi gÃ¶zÃ¼ksÃ¼n
     public void ShowInteractionText()
     {
         interactionText.SetActive(true);
@@ -104,7 +152,7 @@ public class Obeliks : MonoBehaviour
 
         if (isPanelOpen)
         {
-            infoMessage = infoText.text;  // Bilgi metnini güncelle
+            infoMessage = infoText.text;  // Bilgi metnini gÃ¼ncelle
             StopAllCoroutines();
             Vector3 zoomPosition = new Vector3(player.position.x, player.position.y, -10);
             StartCoroutine(SmoothZoom(zoomPosition, zoomInSize));
@@ -119,7 +167,7 @@ public class Obeliks : MonoBehaviour
     private IEnumerator SmoothZoom(Vector3 targetPosition, float targetSize)
     {
         float elapsedTime = 0f;
-        float duration = 1f / zoomSpeed; // Geçiş süresi
+        float duration = 1f / zoomSpeed; // GeÃ§iÅŸ sÃ¼resi
 
         Vector3 startPosition = mainCamera.transform.position;
         float startSize = mainCamera.orthographicSize;
@@ -129,27 +177,18 @@ public class Obeliks : MonoBehaviour
             elapsedTime += Time.deltaTime;
             float t = elapsedTime / duration;
 
-            // Kamera konumunu ve büyüklüğünü yumuşakça değiştir
+            // Kamera konumunu ve bÃ¼yÃ¼klÃ¼ÄŸÃ¼nÃ¼ yumuÅŸakÃ§a deÄŸiÅŸtir
             mainCamera.transform.position = Vector3.Lerp(startPosition, targetPosition, t);
             mainCamera.orthographicSize = Mathf.Lerp(startSize, targetSize, t);
 
             yield return null;
         }
 
-        // Son değerleri tam olarak uygula
+        // Son deÄŸerleri tam olarak uygula
         mainCamera.transform.position = targetPosition;
         mainCamera.orthographicSize = targetSize;
     }
-    // Diğer using'ler yukarıda
-    private void OnEnable()
-    {
-        PlayerEvents.OnPlayerSpawned += HandlePlayerSpawned;
-    }
-
-    private void OnDisable()
-    {
-        PlayerEvents.OnPlayerSpawned -= HandlePlayerSpawned;
-    }
+    
 
     private void HandlePlayerSpawned(GameObject newPlayer)
     {

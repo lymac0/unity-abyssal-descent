@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using TMPro;
 
-public class Interactable : MonoBehaviour
+public class Interactable : MonoBehaviour, IPlayerDependent
 {
     public Transform player;
     public GameObject interactionText;
@@ -22,19 +22,30 @@ public class Interactable : MonoBehaviour
     [TextArea(3, 10)]
     public string infoMessage;
 
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+    public void SetPlayer(Transform playerTransform)
+    {
+        this.player = playerTransform;
+        Debug.Log("Interactable player referansı atandı.");
+    }
     private void OnEnable()
     {
-        PlayerEvents.OnPlayerSpawned += HandlePlayerSpawned;
+        PlayerEvents.OnPlayerSpawned += SetPlayer;
     }
 
     private void OnDisable()
     {
-        PlayerEvents.OnPlayerSpawned -= HandlePlayerSpawned;
+        PlayerEvents.OnPlayerSpawned -= SetPlayer;
     }
 
-    private void HandlePlayerSpawned(GameObject newPlayer)
+    private void SetPlayer(GameObject playerObj)
     {
-        player = newPlayer.transform;
+        player = playerObj.transform;
+        Debug.Log("🔗 Obeliks player'ı aldı: " + player.name);
     }
 
     private void Start()
@@ -57,6 +68,19 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
+        if (player == null || player.Equals(null))
+        {
+            GameObject found = GameObject.FindGameObjectWithTag("Player");
+            if (found != null)
+                player = found.transform;
+            return;
+        }
+        // ❗ interactionText'e güvenli erişim
+        if (interactionText != null && !interactionText.Equals(null))
+        {
+            float distance = Vector2.Distance(player.position, transform.position);
+            interactionText.SetActive(distance < 2f);
+        }
         if (player == null) return;
 
         if (IsInRange(player, transform, interactRange))

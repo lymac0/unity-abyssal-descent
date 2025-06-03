@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NPC : MonoBehaviour
+public class NPC : MonoBehaviour, IPlayerDependent
 {
     public NPCDialogue dialogueData;
     public GameObject dialoguePanel;
@@ -16,7 +16,34 @@ public class NPC : MonoBehaviour
     private bool isTyping, isDialogueActive;
     private Transform playerTransform;
     public float interactionRange = 3f;
+    private Transform player;
 
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+    public void SetPlayer(Transform playerTransform)
+    {
+        this.player = playerTransform;
+        Debug.Log("NPC player referansı atandı.");
+    }
+    private void OnEnable()
+    {
+        PlayerEvents.OnPlayerSpawned += SetPlayer;
+    }
+
+    private void OnDisable()
+    {
+        PlayerEvents.OnPlayerSpawned -= SetPlayer;
+    }
+
+    private void SetPlayer(GameObject playerObj)
+    {
+        player = playerObj.transform;
+        Debug.Log("🔗 Obeliks player'ı aldı: " + player.name);
+    }
     private void Start()
     {
         interactionPrompt.SetActive(false);
@@ -25,6 +52,14 @@ public class NPC : MonoBehaviour
 
     private void Update()
     {
+        if (player == null || player.Equals(null))
+        {
+            GameObject found = GameObject.FindGameObjectWithTag("Player");
+            if (found != null)
+                player = found.transform;
+            return;
+        }
+
         if (playerTransform == null)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -126,19 +161,6 @@ public class NPC : MonoBehaviour
         float distance = Vector2.Distance(player.position, target.position);
         return distance <= range;
     }
-    private void OnEnable()
-    {
-        PlayerEvents.OnPlayerSpawned += HandlePlayerSpawned;
-    }
-
-    private void OnDisable()
-    {
-        PlayerEvents.OnPlayerSpawned -= HandlePlayerSpawned;
-    }
-
-    private void HandlePlayerSpawned(GameObject newPlayer)
-    {
-        playerTransform = newPlayer.transform;
-    }
+    
 
 }

@@ -1,12 +1,12 @@
-using UnityEngine;
 using System;
+using UnityEngine;
 
-public class PlayerEvents : MonoBehaviour
+public static class PlayerEvents
 {
     public static event Action<GameObject> OnPlayerSpawned;
 
-    public static void RaisePlayerSpawned(GameObject Player)
+    public static void RaisePlayerSpawned(GameObject player)
     {
-        OnPlayerSpawned?.Invoke(Player);
+        OnPlayerSpawned?.Invoke(player);
     }
 }
